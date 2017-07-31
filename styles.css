@@ -1,0 +1,298 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    color: #8f979e;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 44px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+h2 {
+    color: #deeff7;
+    font-weight: 100;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #44505a;
+    font-weight: 400;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+h4 {
+    text-align: center;
+    font-weight: 400;
+    margin: 12px 0 50px;
+}
+a {
+    color: #40abe4;
+}
+a.button {
+    background: rgba(34,136,234,1);
+    background: -moz-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,136,234,1)), color-stop(100%, rgba(106,222,219,1)));
+    background: -webkit-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 16px 32px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 4px 22px rgba(52, 113, 167, 0.3);
+    margin-top: 6px;
+    display: block;
+    max-width: 170px;
+    text-align: center;
+    float: right;
+}
+a.button:hover {
+    box-shadow: 0px 4px 28px rgba(52, 113, 167, 0.4);
+}
+a:hover {
+    text-decoration: none;
+}
+p {
+
+}
+
+header {
+    background: rgba(34,136,234,1);
+    background: -moz-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,136,234,1)), color-stop(100%, rgba(106,222,219,1)));
+    background: -webkit-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
+    padding: 110px 0 400px;
+    text-align: center;
+}
+@media screen and (max-width: 992px) {
+    header {
+        padding-bottom: 280px;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        padding-bottom: 130px;
+    }
+}
+
+nav {
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+nav .brand {
+    text-align: left;
+    padding-top: 8px;
+}
+nav .brand .logo {
+    background: url(../images/logo.png);
+    background-size: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: -5px;
+    height: 40px;
+    width: 40px;
+}
+nav .brand a {
+    color: #ffffff;
+    font-size: 17px;
+}
+nav .nav-links {
+    text-align: right;
+}
+nav .nav-links a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 16px;
+    padding: 0 16px;
+}
+
+section {
+    padding: 100px 0 120px;
+}
+section.alt-background {
+    background: #f5f8fa;
+}
+section.alt-background-dark {
+    background: #e4ecf1;
+    padding: 80px 0;
+}
+
+#Screenshot {
+    margin-top: -350px;
+}
+.dashboard-screenshot {
+    background: url(../images/dashboard.png) no-repeat;
+    background-size: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+    height: 520px;
+}
+@media screen and (max-width: 992px) {
+    #Screenshot {
+        margin-top: -230px;
+    }
+    .dashboard-screenshot {
+        width: 600px;
+        height: 390px;
+    }
+}
+@media screen and (max-width: 630px) {
+    .dashboard-screenshot {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    #Screenshot {
+        margin-top: -90px;
+    }
+    .dashboard-screenshot {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+#Features ul {
+    margin: 0;
+    padding: 0 0 40px;
+    list-style: none;
+}
+#Features ul li {
+    padding: 20px 30px 20px 70px;
+    position: relative;
+}
+#Features ul li i {
+    color: #40abe4;
+    border: 2px solid #40abe4;
+    border-radius: 40px;
+    font-size: 24px;
+    margin-right: 18px;
+    padding: 11px 0;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 0;
+}
+#Features ul li .feature-title {
+    color: #44505a;
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding-top: 8px;
+    text-transform: capitalize;
+}
+#Features ul li .feature-desc {
+    display: block;
+}
+@media screen and (max-width: 630px) {
+    #Features {
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    #Features {
+        padding-top: 70px;
+    }
+}
+
+#HowItWorks .step {
+    padding: 80px 0;
+}
+#HowItWorks .step:first-of-type {
+    padding-top: 130px;
+}
+#HowItWorks .step-index {
+    color: #e3ecf2;
+    font-size: 160px;
+    font-weight: 800;
+    line-height: 0.3;
+}
+#HowItWorks .step-title {
+    color: #44505a;
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding-top: 8px;
+}
+#HowItWorks .step-hr {
+    display: block;
+    border-bottom: 2px solid #e1e9ef;
+    width: 102px;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+#HowItWorks .step-desc {
+    line-height: 1.6;
+}
+#HowItWorks .step-img {
+    margin-top: -120px;
+    width: 100%;
+}
+@media screen and (max-width: 992px) {
+    #HowItWorks .step {
+        padding: 60px 0;
+    }
+    #HowItWorks .step-img {
+        margin-top: 0;
+    }
+}
+
+#Pricing h3 {
+    margin: 0;
+    text-align: left;
+    font-size: 28px;
+    text-transform: none;
+    font-weight: 100;
+    color: #40abe4;
+    line-height: 1;
+}
+#Pricing span {
+    margin: 0;
+    text-align: left;
+    font-size: 30px;
+    text-transform: none;
+    color: #44505a;
+}
+@media screen and (max-width: 992px) {
+    #Pricing, #Pricing h3 {
+        text-align: center;
+    }
+    a.button {
+        float: none;
+        margin: 30px auto 0;
+    }
+}
+
+#Contact {
+    padding: 60px 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+footer p {
+    color: #b7bfc5;
+    text-align: center;
+    font-size: 12px;
+    padding: 40px 0;
+}
