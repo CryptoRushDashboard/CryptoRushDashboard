@@ -99,7 +99,7 @@ nav .brand {
     padding-top: 8px;
 }
 nav .brand .logo {
-    background: url(logo.png);
+    background: url(../logo.png);
     background-size: 100%;
     display: inline-block;
     margin-right: 10px;
@@ -138,7 +138,7 @@ section.alt-background-dark {
     margin-top: -350px;
 }
 .dashboard-screenshot {
-    background: url(dashboard.png) no-repeat;
+    background: url(../dashboard.png) no-repeat;
     background-size: 100%;
     display: block;
     margin: 0 auto;
