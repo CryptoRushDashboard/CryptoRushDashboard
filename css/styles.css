@@ -119,8 +119,13 @@ nav .nav-links a {
     color: #ffffff;
     display: inline-block;
     font-size: 13px;
-    margin-top: 16px;
+    margin-top: 8px;
     padding: 0 16px;
+}
+nav .nav-links a#buyNow {
+    border: 1px solid #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
 section {
