@@ -22,7 +22,7 @@
 
         </script>
     </head>
-    
+
     <body>
         <header>
             <nav>
@@ -33,8 +33,8 @@
                     <div class="col-sm-8 hidden-xs nav-links">
                         <a href="#Features">Features</a>
                         <a href="#HowItWorks">How It Works</a>
-                        <!--<a href="." id="demo">Demo</a>-->
-                        <a href="https://cryptostorm.typeform.com/to/nPtFB0" id="buyNow">Buy</a>
+                        <a href="https://we.tl/h99bhYJEun" id="demo" target="_blank" class="track-click">Demo</a>
+                        <a href="https://cryptostorm.typeform.com/to/nPtFB0" class="track-click typeform-share" id="buyNow" data-mode="popup" target="_blank">Buy</a>
                     </div>
                 </div>
             </nav>
@@ -162,8 +162,8 @@
                     <span>Buy your copy of CryptoStorm today.</span>
                 </div>
                 <div class="col-md-4">
-                    <a class="typeform-share button" href="https://cryptostorm.typeform.com/to/nPtFB0" data-mode="popup" target="_blank">Buy now</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-                    <!--<a class="button light" href="." target="_blank">Demo</a>-->
+                    <a class="typeform-share button track-click" id="buyNowBanner" href="https://cryptostorm.typeform.com/to/nPtFB0" data-mode="popup" target="_blank">Buy now</a>
+                    <a class="button light track-click" id="demoBanner" href="https://we.tl/h99bhYJEun" target="_blank">Demo</a>
                 </div>
             </div>
         </section>
@@ -179,5 +179,19 @@
                 <p>© 2017 CryptoStorm. All Rights Reserved.
             </div>
         </footer>
+        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        <script>
+            var toTrack = document.getElementsByClassName("track-click");
+
+            for (var i = 0; i < toTrack.length; i++) {
+                toTrack[i].addEventListener('click', function(e) {
+                    ga('send', 'event', {
+                        eventCategory: e.target.id,
+                        eventAction: 'click',
+                        eventLabel: e.target.href
+                    })
+                });
+            }
+        </script>
     </body>
 </html>
