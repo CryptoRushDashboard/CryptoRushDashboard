@@ -44,16 +44,21 @@ a.button {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
     color: #ffffff;
     border-radius: 4px;
-    padding: 16px 32px;
-    font-size: 18px;
+    padding: 14px 32px;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     box-shadow: 0px 4px 22px rgba(52, 113, 167, 0.3);
     margin-top: 6px;
-    display: block;
+    display: inline-block;
     max-width: 170px;
     text-align: center;
-    float: right;
+    margin-right: 20px;
+}
+a.button.light {
+    background: #ffffff;
+    color: #40abe4;
+    margin: 14px auto 0;
 }
 a.button:hover {
     box-shadow: 0px 4px 28px rgba(52, 113, 167, 0.4);
@@ -74,7 +79,7 @@ header {
     background: -ms-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
     background: linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
-    padding: 110px 0 400px;
+    padding: 120px 0 400px;
     text-align: center;
 }
 @media screen and (max-width: 992px) {
@@ -119,13 +124,23 @@ nav .nav-links a {
     color: #ffffff;
     display: inline-block;
     font-size: 13px;
-    margin-top: 4px;
+    margin-top: 2px;
     padding: 0 16px;
+    text-align: center;
 }
 nav .nav-links a#buyNow {
-    border: 1px solid #ffffff;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 4px;
+    background: #ffffff;
+    color: #40abe4;
+    min-width: 80px;
+}
+nav .nav-links a#demo {
+    padding: 10px 16px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-right: 12px;
+    min-width: 80px;
 }
 
 section {
@@ -283,8 +298,7 @@ section.alt-background-dark {
         text-align: center;
     }
     a.button {
-        float: none;
-        margin: 30px auto 0;
+        margin-top: 30px;
     }
 }
 
