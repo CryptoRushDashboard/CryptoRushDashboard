@@ -70,6 +70,25 @@ p {
 
 }
 
+progress {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+progress::-webkit-progress-bar {
+    background: #e4ecf1;
+}
+progress::-webkit-progress-value {
+    background: rgba(34,136,234,1);
+    background: -moz-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,136,234,1)), color-stop(100%, rgba(106,222,219,1)));
+    background: -webkit-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    background: linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
+}
+
 header {
     background: rgba(34,136,234,1);
     background: -moz-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
@@ -187,6 +206,16 @@ section.alt-background-dark {
         width: 300px;
         height: 200px;
     }
+}
+
+#PromoProgress {
+    padding: 20px 0 0;
+}
+#PromoProgress h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    text-transform: none;
+    font-weight: 100;
 }
 
 #Features ul {
