@@ -236,7 +236,6 @@ section.alt-background-dark {
     position: relative;
 }
 .dashboard-screenshot {
-    cursor: pointer;
     background: url(../images/dashboard.png) no-repeat;
     background-size: 100%;
     display: block;
