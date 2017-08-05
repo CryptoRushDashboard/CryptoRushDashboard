@@ -17,6 +17,9 @@ h2 {
     max-width: 600px;
     margin: 0 auto;
 }
+h2 strong {
+    color: #deeff7;
+}
 h3 {
     text-align: center;
     font-size: 22px;
