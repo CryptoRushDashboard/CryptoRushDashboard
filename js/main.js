@@ -30,18 +30,20 @@ function debounce(func, wait, immediate) {
 // Payment form
 var checkDiscountCode = debounce((transactionId, discountCode) => {
     discountCode = discountCode.replace(' ', '')
-    axios.get(baseUrl+'/payment/discount/'+transactionId+'/'+discountCode)
-    .then((res) => {
-        if (res.data.isValid) {
-            document.querySelector('.discount-error').style.display = 'none'
-            updatePaymentFrame(transactionId, res.data.amount)
-        } else {
-            document.querySelector('.discount-error').style.display = 'block'
-        }
-    })
-    .catch((err) => {
-        console.log(err)
-    })
+    if (discountCode && discountCode.length > 0) {
+        axios.get(baseUrl+'/payment/discount/'+transactionId+'/'+discountCode)
+        .then((res) => {
+            if (res.data.isValid) {
+                document.querySelector('.discount-error').style.display = 'none'
+                updatePaymentFrame(transactionId, res.data.amount)
+            } else {
+                document.querySelector('.discount-error').style.display = 'block'
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
 }, 1000)
 
 var updateEmail = (transactionId, email) => {
