@@ -27,14 +27,23 @@
         <header>
             <nav>
                 <div class="container">
-                    <div class="col-sm-4 brand">
+                    <span class="navbar-bg"></span>
+                    <div id="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="col-md-4 col-xs-12 brand">
                         <a href="."><span class="logo"></span>CryptoStorm</a>
                     </div>
-                    <div class="col-sm-8 hidden-xs nav-links">
+                    <div class="col-md-8 col-xs-12 nav-links">
                         <a href="#Features">Features</a>
                         <a href="#HowItWorks">How It Works</a>
-                        <a href="https://we.tl/h99bhYJEun" id="demo" target="_blank" class="track-click">Demo</a>
-                        <a href="https://cryptostorm.typeform.com/to/nPtFB0" class="track-click typeform-share" id="buyNow" data-mode="popup" target="_blank">Buy</a>
+                        <a id="demo" class="track-click">Demo</a>
+                        <a id="buy" class="track-click">Buy</a>
                     </div>
                 </div>
             </nav>
@@ -45,6 +54,9 @@
         </header>
         <div id="Screenshot">
             <div class="container">
+                <!--<span class="video-overlay">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </span>-->
                 <div class="dashboard-screenshot"></div>
             </div>
         </div>
@@ -52,8 +64,8 @@
         <div id="PromoProgress">
             <div class="container">
                 <div class="col-md-8 col-md-offset-2">
-                    <h3>184 / 200 promo slots left at 0.15 BTC</h3>
-                    <progress value="16" max="200"></progress>
+                    <h3>163 / 200 promo slots left at 0.15 BTC</h3>
+                    <progress value="37" max="200"></progress>
                 </div>
             </div>
         </div>
@@ -129,12 +141,12 @@
                         <span class="step-desc">Specify your buy and sell schema. Enter the amount (in BTC) and rate you wish to buy. Set numerous sell intervals at various rates to maximize your profits.</span>
                     </div>
                     <div class="col-md-5 col-md-offset-0 col-lg-4 col-lg-offset-1 col-xs-8 col-xs-offset-2">
-                        <img class="step-img" src="step1.png">
+                        <img class="step-img" src="images/step1.png">
                     </div>
                 </div>
                 <div class="row step">
                     <div class="col-md-5 col-lg-4 col-md-offset-1 hidden-xs hidden-sm">
-                        <img class="step-img" src="step2.png">
+                        <img class="step-img" src="images/step2.png">
                     </div>
                     <div class="col-md-1 col-lg-offset-1 col-xs-2">
                         <span class="step-index">2</span>
@@ -145,7 +157,7 @@
                         <span class="step-desc">As soon as you type in a coin and press enter, your sell and buy orders will immediately be placed according to your configuration, without latency.</span>
                     </div>
                     <div class="hidden-md col-xs-8 col-xs-offset-2 hidden-md hidden-lg">
-                        <img class="step-img" src="step2.png">
+                        <img class="step-img" src="images/step2.png">
                     </div>
                 </div>
                 <div class="row step">
@@ -158,7 +170,7 @@
                         <span class="step-desc">Track your orders with a real-time, second chart, with your personal buy and sell markers. View your open and closed orders in an automatically updated list.</span>
                     </div>
                     <div class="col-md-5 col-md-offset-0 col-lg-4 col-lg-offset-1 col-xs-8 col-xs-offset-2">
-                        <img class="step-img" src="step3.png">
+                        <img class="step-img" src="images/step3.png">
                     </div>
                 </div>
             </div>
@@ -171,8 +183,8 @@
                     <span>Buy your copy of CryptoStorm today.</span>
                 </div>
                 <div class="col-md-4">
-                    <a class="typeform-share button track-click" id="buyNowBanner" href="https://cryptostorm.typeform.com/to/nPtFB0" data-mode="popup" target="_blank">Buy now</a>
-                    <a class="button light track-click" id="demoBanner" href="https://we.tl/h99bhYJEun" target="_blank">Demo</a>
+                    <a class="button track-click" id="buyBanner">Buy now</a>
+                    <a class="button light track-click" id="demoBanner">Demo</a>
                 </div>
             </div>
         </section>
@@ -188,7 +200,106 @@
                 <p>© 2017 CryptoStorm. All Rights Reserved.
             </div>
         </footer>
-        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+
+        <!-- DEMO MODAL -->
+        <div id="DemoModal" class="modal">
+            <img id="CloseDemoModal" class="modal-close" src="images/close.gif">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <i class="fa fa-arrow-down modal-icon" aria-hidden="true"></i>
+                    <h3>Download your free demo</h3>
+                    <p>Select your OS, download the files, unzip, and launch the dashboard through the demo mode to try out a limited version of CryptoStorm.</p>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-MacOS.zip" download>macOS</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows32.zip" download>Windows32</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows64.zip" download>Windows64</a></div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux32.zip" download>Linux32</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux64.zip" download>Linux64</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-LinuxArmv71.zip" download>Linux Armv71</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- END DEMO MODAL -->
+
+        <!-- BUY MODAL -->
+        <div id="BuyModal" class="modal">
+            <img id="CloseBuyModal" class="modal-close" src="images/close.gif">
+            <div class="modal-container">
+                <div class="row" id="BuyForm">
+                    <ul class="col-md-8 col-md-offset-2">
+                        <div class="modal-header">
+                            <i class="fa fa-shopping-cart modal-icon" aria-hidden="true"></i>
+                            <h3>Buy CryptoStorm Now</h3>
+                            <p>Enter some info. You'll receive activation code and link to download.</p>
+                        </div>
+                        <li>
+                            <span class="question-number">1&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                            <label for="email">What is your email address? *</label>
+                            <input name="email" type="email">
+                            <span class="error-message email-error">Invalid email address</span>
+                        </li>
+                        <li>
+                            <span class="question-number">2&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                            <label for="discount">Do you have a discount code?</label>
+                            <span>You can get up to 25% off with a valid discount code.</span>
+                            <input name="discount" type="text">
+                            <span class="error-message discount-error">Invalid discount code</span>
+                        </li>
+                        <li>
+                            <span class="question-number">3&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                            <label>Payment</label>
+                            <span>Once payment is received, we will display your activation code and download link.</span>
+                            <div id="payment-address-container">
+                                <!--<iframe src="https://klukt.com/w/a6eage6yew/4847e/0.5/BTC" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>-->
+                            </div>
+                            <span class="error-message payment-error">Invalid payment amount</span>
+                            <div class="transaction-pulse-container">
+                                <span class="pulse">Searching for your transaction...</span>
+                                <span>Hang tight while we search for your transaction. Your activation code will automatically be displayed once we've validated your payment.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row" id="PaymentSuccess">
+                    <div class="modal-header">
+                        <i class="fa fa-check modal-icon" aria-hidden="true"></i>
+                        <h3>Success!</h3>
+                        <p>Here is your activation code:</p>
+                        <div class="col-md-12">
+                            <span id="activation-code" class="col-md-8 col-md-offset-2">[Activation code]</span>
+                        </div>
+                    </div>
+
+                    <h3>Download</h3>
+                    <p>Select your OS, download the files, unzip, launch and enter the activation key from above.</p>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-MacOS.zip" download>macOS</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows32.zip" download>Windows32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows64.zip" download>Windows64</a></div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux32.zip" download>Linux32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux64.zip" download>Linux64</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-LinuxArmv71.zip" download>Linux Armv71</a></div>
+                    </div>
+                </div>
+
+                <div class="row" id="PaymentFail">
+                    <div class="modal-header">
+                        <i class="fa fa-exclamation-triangle modal-icon" aria-hidden="true"></i>
+                        <h3>Error</h3>
+                        <p>We received your payment, but <strong>it wasn't for the right amount.</strong></p>
+                        <p>Please contact <a href="http://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a> for support. We will respond as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END BUY MODAL -->
+
         <script>
             var toTrack = document.getElementsByClassName("track-click");
 
@@ -202,5 +313,7 @@
                 });
             }
         </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
