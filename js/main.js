@@ -1,5 +1,5 @@
 // config
-var baseUrl = 'http://localhost:3000'
+var baseUrl = 'http://104.131.11.223'
 var transaction = {}
 var paymentTimer = null
 
