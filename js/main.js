@@ -1,5 +1,5 @@
 // config
-var baseUrl = 'http://104.131.11.223'
+var baseUrl = 'http://localhost:3000'
 var transaction = {}
 var paymentTimer = null
 
@@ -138,4 +138,14 @@ var closeBuyModal  = document.getElementById('CloseBuyModal')
 buyBtn.addEventListener("click", () => initPayment(buyModal))
 buyBannerBtn.addEventListener("click", () => initPayment(buyModal))
 closeBuyModal.addEventListener("click", () => hideModal(buyModal))
+
+
+var dashboardScreenshot = document.querySelector('.dashboard-screenshot')
+var videoOverlay        = document.querySelector('.video-overlay')
+var youTubeModal        = document.getElementById('YouTubeModal')
+var closeYouTubeModal   = document.getElementById('CloseYouTubeModal')
+
+videoOverlay.addEventListener("click", () => showModal(youTubeModal))
+dashboardScreenshot.addEventListener("click", () => showModal(youTubeModal))
+closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
 
