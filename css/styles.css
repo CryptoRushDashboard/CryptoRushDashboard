@@ -2,6 +2,11 @@
     font-family: 'Nunito', sans-serif;
     color: #8f979e;
 }
+body {
+    min-height: 100vh;
+    padding-bottom: 242px;
+    position: relative;
+}
 h1 {
     color: #ffffff;
     font-size: 44px;
@@ -62,6 +67,11 @@ a.button.light {
     background: #ffffff;
     color: #40abe4;
     margin: 14px auto 0;
+}
+a.button.wide {
+    margin: 40px 0 0;
+    width: auto;
+    max-width: 100%;
 }
 a.button:hover {
     box-shadow: 0px 4px 28px rgba(52, 113, 167, 0.4);
@@ -231,6 +241,15 @@ section.alt-background {
 section.alt-background-dark {
     background: #e4ecf1;
     padding: 80px 0;
+}
+section.centered-h {
+    text-align: center;
+}
+section.centered-v {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-60%);
 }
 
 #Screenshot {
@@ -415,13 +434,17 @@ section.alt-background-dark {
     }
 }
 
+.footer-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 #Contact {
     padding: 60px 0 0;
     text-align: center;
     font-size: 18px;
     font-weight: 100;
 }
-
 footer p {
     color: #b7bfc5;
     text-align: center;
