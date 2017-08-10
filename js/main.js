@@ -1,4 +1,5 @@
 // config
+// var baseUrl = 'http://localhost:3000'
 var baseUrl = 'http://104.131.11.223'
 var transaction = {}
 var paymentTimer = null
@@ -126,7 +127,7 @@ var demoModal       = document.getElementById('DemoModal')
 var closeDemoModal  = document.getElementById('CloseDemoModal')
 
 demoBtn.addEventListener("click", () => showModal(demoModal))
-demoBannerBtn.addEventListener("click", () => showModal(demoModal))
+if (demoBannerBtn) demoBannerBtn.addEventListener("click", () => showModal(demoModal))
 closeDemoModal.addEventListener("click", () => hideModal(demoModal))
 
 
@@ -136,7 +137,7 @@ var buyModal       = document.getElementById('BuyModal')
 var closeBuyModal  = document.getElementById('CloseBuyModal')
 
 buyBtn.addEventListener("click", () => initPayment(buyModal))
-buyBannerBtn.addEventListener("click", () => initPayment(buyModal))
+if (buyBannerBtn) buyBannerBtn.addEventListener("click", () => initPayment(buyModal))
 closeBuyModal.addEventListener("click", () => hideModal(buyModal))
 
 
@@ -145,7 +146,7 @@ var videoOverlay        = document.querySelector('.video-overlay')
 var youTubeModal        = document.getElementById('YouTubeModal')
 var closeYouTubeModal   = document.getElementById('CloseYouTubeModal')
 
-videoOverlay.addEventListener("click", () => showModal(youTubeModal))
-dashboardScreenshot.addEventListener("click", () => showModal(youTubeModal))
-closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
+if (videoOverlay) videoOverlay.addEventListener("click", () => showModal(youTubeModal))
+if (dashboardScreenshot) dashboardScreenshot.addEventListener("click", () => showModal(youTubeModal))
+if (closeYouTubeModal) closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
 
