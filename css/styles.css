@@ -437,6 +437,13 @@ section.centered-v {
         margin-top: 30px;
     }
 }
+@media screen and (max-width: 1200px) {
+    a.button {
+        margin-right: auto;
+        display: block;
+        margin-left: auto;
+    }
+}
 
 .footer-wrapper {
     position: absolute;
