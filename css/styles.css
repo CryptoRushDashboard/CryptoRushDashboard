@@ -256,6 +256,30 @@ section.centered-v {
     transform: translateY(-60%);
 }
 
+.announcement {
+    /*background: rgba(55, 162, 230, 0.5);*/
+    background: rgba(35, 137, 234, 0.4);
+    border-radius: 14px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 25px;
+    padding: 0 10px 1px 6px;
+}
+.announcement .new-pill {
+    background: #2cd495;
+    border-radius: 12px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-right: 7px;
+    text-transform: uppercase;
+    padding: 0px 6px;
+}
+
 #Screenshot {
     margin-top: -350px;
     position: relative;
