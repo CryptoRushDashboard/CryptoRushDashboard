@@ -6,3 +6,22 @@
 #GenerateCodePage h1 {
     color: #8f979e;
 }
+#GenerateCodePage h2 {
+    color: #8f979e;
+}
+#GenerateCodePage h2 strong {
+    color: inherit;
+}
+
+#LoadingCode {
+    display: none;
+}
+
+#DisplayCode {
+    display: none;
+    padding-top: 60px;
+}
+
+#ErrorCode {
+    display: none;
+}
