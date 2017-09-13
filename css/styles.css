@@ -72,6 +72,7 @@ a.button.light {
     margin: 14px auto 0;
 }
 a.button.wide {
+    display: inline-block;
     margin: 40px 0 0;
     width: auto;
     max-width: 100%;
