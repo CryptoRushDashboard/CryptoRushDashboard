@@ -72,6 +72,7 @@ a.button.light {
     margin: 14px auto 0;
 }
 a.button.wide {
+    display: inline-block;
     margin: 40px 0 0;
     width: auto;
     max-width: 100%;
@@ -149,7 +150,7 @@ header {
     background: -ms-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
     background: linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2288ea', endColorstr='#6adedb', GradientType=1 );
-    padding: 120px 0 400px;
+    padding: 130px 0 380px;
     text-align: center;
 }
 @media screen and (max-width: 992px) {

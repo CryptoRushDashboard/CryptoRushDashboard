@@ -33,7 +33,6 @@
                     <div class="col-md-8 col-xs-12 nav-links">
                         <a href="#Features">Features</a>
                         <a href="#HowItWorks">How It Works</a>
-                        <a href="https://docs.google.com/document/d/1xmi3fz4TWkERAlPC7RlPQ3kEmdSznBzpo3oT8wCy534/edit?usp=sharing">FAQ</a>
                         <a id="demo" class="track-click">Demo</a>
                         <a id="buy" class="track-click">Buy</a>
                     </div>
@@ -43,7 +42,51 @@
 
         <section id="GenerateCode" class="centered-v centered-h">
             <div class="container">
-                <h1>This promo ended on August 11, 2017 18:00 GMT</h1>
+                <h1>Try CryptoStorm for FREE!</h1>
+                <h2>Generate your access key to unlock free 24 hour access to CryptoStorm.</h2>
+            </div>
+            <a class="button track-click wide" id="generateCodeBtn">Generate code</a>
+        </section>
+
+        <section id="LoadingCode" class="centered-v centered-h">
+            <i class="fa fa-cogs modal-icon" aria-hidden="true"></i>
+            <span class="pulse">Generating activation code...</span>
+        </section>
+
+        <section id="DisplayCode" class="centered-h">
+            <div class="container">
+                <i class="fa fa-check modal-icon" aria-hidden="true"></i>
+                <h3>Success!</h3>
+                <p>Here is your activation code:</p>
+                <p>Code expires on <strong><span id="code-expiry"></span></strong></p>
+                <div class="col-md-12">
+                    <span id="activation-code" class="col-md-8 col-md-offset-2">[Activation code]</span>
+                </div>
+
+                <h3>Download</h3>
+                <p>Select your OS, download the files, unzip, launch and enter the activation key.</p>
+                <p>If you already have the demo, <strong>you don't need to download CryptoStorm again</strong></p>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-MacOS.zip" download>macOS</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-ia32.zip" download>Windows32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-x64.zip" download>Windows64</a></div>
+                    </div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-ia32.zip" download>Linux32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-x64.zip" download>Linux64</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-armv7l.zip" download>Linux Armv71</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="centered-h" id="ErrorCode">
+            <div class="modal-header">
+                <i class="fa fa-exclamation-triangle modal-icon" aria-hidden="true"></i>
+                <h3>Error</h3>
+                <p>There was a problem while generating your access code.</p>
+                <p>Please contact <a href="http://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a> for support. We will respond as soon as possible.</p>
             </div>
         </section>
 
@@ -73,13 +116,13 @@
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-MacOS.zip" download>macOS</a></div>
-                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows32.zip" download>Windows32</a></div>
-                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows64.zip" download>Windows64</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-ia32.zip" download>Windows32</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-x64.zip" download>Windows64</a></div>
                 </div>
                 <div class="col-md-8 col-md-offset-2">
-                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux32.zip" download>Linux32</a></div>
-                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux64.zip" download>Linux64</a></div>
-                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-LinuxArmv7l.zip" download>Linux Armv71</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-ia32.zip" download>Linux32</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-x64.zip" download>Linux64</a></div>
+                    <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-armv7l.zip" download>Linux Armv71</a></div>
                 </div>
             </div>
         </div>
@@ -105,7 +148,6 @@
                         <li>
                             <span class="question-number">2&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
                             <label for="discount">Do you have a discount code?</label>
-                            <span>You can get up to 30% off with a valid discount code.</span>
                             <input name="discount" type="text">
                             <span class="error-message discount-error">Invalid discount code</span>
                         </li>
@@ -140,13 +182,13 @@
                     <p>If you already have the demo, <strong>you don't need to download CryptoStorm again</strong></p>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-MacOS.zip" download>macOS</a></div>
-                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows32.zip" download>Windows32</a></div>
-                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Windows64.zip" download>Windows64</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-ia32.zip" download>Windows32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-win32-x64.zip" download>Windows64</a></div>
                     </div>
                     <div class="col-md-8 col-md-offset-2">
-                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux32.zip" download>Linux32</a></div>
-                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-Linux64.zip" download>Linux64</a></div>
-                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-LinuxArmv7l.zip" download>Linux Armv71</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-ia32.zip" download>Linux32</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-x64.zip" download>Linux64</a></div>
+                        <div class="col-sm-4 col-xs-6 download-OS"><a href="downloads/CryptoStorm-linux-armv7l.zip" download>Linux Armv71</a></div>
                     </div>
                 </div>
 
