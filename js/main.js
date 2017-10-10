@@ -3,6 +3,7 @@
 var baseUrl = 'http://104.131.11.223'
 var transaction = {}
 var paymentTimer = null
+var currentPage = window.location.href.toLowerCase()
 
 
 // Mobile menu
@@ -82,31 +83,40 @@ var checkForPayment = function(transactionId) {
 }
 
 var initPayment = function(modalId) {
-    showModal(modalId)
+    if (modalId)
+        showModal(modalId)
     axios.post(baseUrl + '/payment')
     .then((res) => {
         transaction = res.data
         updatePaymentFrame(res.data._id, res.data.amount)
         paymentTimer = setInterval(() => checkForPayment(res.data._id), 2000)
+
+        var discountInput = document.querySelector('#BuyModal input[name=discount]')
+        if (discountInput) checkDiscountCode(res.data._id, discountInput.value)
     })
     .catch((err) => {
         console.log(err)
     })
+
 }
 
-document.querySelector('#BuyModal input[name=discount]').addEventListener("keyup", function(e) {
-    checkDiscountCode(transaction._id, e.target.value)
-})
+var discountInput = document.querySelector('#BuyModal input[name=discount]')
+if (discountInput)
+    discountInput.addEventListener("keyup", function(e) {
+        checkDiscountCode(transaction._id, e.target.value)
+    })
 
-document.querySelector('#BuyModal input[name=email]').addEventListener("blur", function(e) {
-    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    if (!re.test(e.target.value)) {
-        document.querySelector('.email-error').style.display = 'block'
-    } else {
-        document.querySelector('.email-error').style.display = 'none'
-        updateEmail(transaction._id, e.target.value)
-    }
-})
+var emailInput = document.querySelector('#BuyModal input[name=email]')
+if (emailInput)
+    emailInput.addEventListener("blur", function(e) {
+        var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        if (!re.test(e.target.value)) {
+            document.querySelector('.email-error').style.display = 'block'
+        } else {
+            document.querySelector('.email-error').style.display = 'none'
+            updateEmail(transaction._id, e.target.value)
+        }
+    })
 
 
 // Modals
@@ -121,14 +131,15 @@ var hideModal = function(modalId) {
     document.getElementsByTagName("body")[0].style.overflow = "visible"
 }
 
+
 var demoBtn         = document.getElementById('demo')
 var demoBannerBtn   = document.getElementById('demoBanner')
 var demoModal       = document.getElementById('DemoModal')
 var closeDemoModal  = document.getElementById('CloseDemoModal')
 
-demoBtn.addEventListener("click", () => showModal(demoModal))
+if (demoBtn) demoBtn.addEventListener("click", () => showModal(demoModal))
 if (demoBannerBtn) demoBannerBtn.addEventListener("click", () => showModal(demoModal))
-closeDemoModal.addEventListener("click", () => hideModal(demoModal))
+if (closeDemoModal) closeDemoModal.addEventListener("click", () => hideModal(demoModal))
 
 
 var buyBtn         = document.getElementById('buy')
@@ -136,9 +147,10 @@ var buyBannerBtn   = document.getElementById('buyBanner')
 var buyModal       = document.getElementById('BuyModal')
 var closeBuyModal  = document.getElementById('CloseBuyModal')
 
-buyBtn.addEventListener("click", () => initPayment(buyModal))
+if (buyBtn) buyBtn.addEventListener("click", () => initPayment(buyModal))
 if (buyBannerBtn) buyBannerBtn.addEventListener("click", () => initPayment(buyModal))
-closeBuyModal.addEventListener("click", () => hideModal(buyModal))
+if (currentPage.indexOf('buy.html') >= 0) initPayment(null)
+if (closeBuyModal) closeBuyModal.addEventListener("click", () => hideModal(buyModal))
 
 
 var dashboardScreenshot = document.querySelector('.dashboard-screenshot')
@@ -150,3 +162,32 @@ if (videoOverlay) videoOverlay.addEventListener("click", () => showModal(youTube
 if (dashboardScreenshot) dashboardScreenshot.addEventListener("click", () => showModal(youTubeModal))
 if (closeYouTubeModal) closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
 
+
+// Handle dicount code in query string
+var saveDiscountCode = function(code) {
+    console.log(code)
+    axios.get(baseUrl+'/payment/discount/'+transaction._id+'/'+code)
+    .then((res) => {
+        if (res.data.isValid) {
+            console.log('valid discount code')
+            updatePaymentFrame(transaction._id, res.data.amount)
+            document.cookie = 'discountcode='+code  // save to cookie
+            document.querySelector('input[name=discount]').value = code
+        } else {
+            console.log('invalid discount code')
+        }
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+}
+var getDiscountCode = function() {
+    let cookieStart = document.cookie.indexOf('discountcode=')
+    if (cookieStart >= 0) saveDiscountCode(document.cookie.substr(cookieStart + 13, 6))
+}
+
+let urlStart = currentPage.indexOf('discountcode=')
+if (urlStart >= 0)
+    saveDiscountCode(currentPage.substr(urlStart + 13, 6))
+else
+    getDiscountCode()
