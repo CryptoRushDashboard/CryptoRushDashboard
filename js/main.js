@@ -89,10 +89,11 @@ var initPayment = function(modalId) {
     .then((res) => {
         transaction = res.data
         updatePaymentFrame(res.data._id, res.data.amount)
-        paymentTimer = setInterval(() => checkForPayment(res.data._id), 2000)
 
         var discountInput = document.querySelector('#BuyModal input[name=discount]')
         if (discountInput) checkDiscountCode(res.data._id, discountInput.value)
+        
+        paymentTimer = setInterval(() => checkForPayment(res.data._id), 2000)
     })
     .catch((err) => {
         console.log(err)
@@ -163,16 +164,18 @@ if (dashboardScreenshot) dashboardScreenshot.addEventListener("click", () => sho
 if (closeYouTubeModal) closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
 
 
-// Handle dicount code in query string
+// Handle discount code in query string
 var saveDiscountCode = function(code) {
     console.log(code)
     axios.get(baseUrl+'/payment/discount/'+transaction._id+'/'+code)
     .then((res) => {
         if (res.data.isValid) {
             console.log('valid discount code')
-            updatePaymentFrame(transaction._id, res.data.amount)
             document.cookie = 'discountcode='+code  // save to cookie
             document.querySelector('input[name=discount]').value = code
+
+            // if (currentPage.indexOf('buy.html') >= 0) initPayment(null)
+            updatePaymentFrame(transaction._id, res.data.amount)
         } else {
             console.log('invalid discount code')
         }
