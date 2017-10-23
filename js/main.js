@@ -132,17 +132,6 @@ var hideModal = function(modalId) {
     document.getElementsByTagName("body")[0].style.overflow = "visible"
 }
 
-
-var demoBtn         = document.getElementById('demo')
-var demoBannerBtn   = document.getElementById('demoBanner')
-var demoModal       = document.getElementById('DemoModal')
-var closeDemoModal  = document.getElementById('CloseDemoModal')
-
-if (demoBtn) demoBtn.addEventListener("click", () => showModal(demoModal))
-if (demoBannerBtn) demoBannerBtn.addEventListener("click", () => showModal(demoModal))
-if (closeDemoModal) closeDemoModal.addEventListener("click", () => hideModal(demoModal))
-
-
 var buyBtn         = document.getElementById('buy')
 var buyBannerBtn   = document.getElementById('buyBanner')
 var buyModal       = document.getElementById('BuyModal')
