@@ -68,7 +68,7 @@ var updatePaymentFrame = function(transactionId, amount) {
     }
     klukt.render('#payment-address-container', opts, function (payment) {
         console.log('Payment received!!', payment)
-    }
+    })
     //paymentContainer.innerHTML = '<iframe src="https://klukt.com/widget?apikey=8vwkqvzpsi&id='+transactionId+'&amount='+amount+'&curr=BTC&email=cryptoripped@gmail.com" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
 }
 
