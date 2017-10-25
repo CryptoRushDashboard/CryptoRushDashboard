@@ -59,7 +59,7 @@ var updateEmail = (transactionId, email) => {
 
 var updatePaymentFrame = function(transactionId, amount) {
     var paymentContainer = document.getElementById('payment-address-container')
-    paymentContainer.innerHTML = '<iframe src="https://klukt.com/w/8vwkqvzpsi/'+transactionId+'/'+amount+'/BTC" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
+    paymentContainer.innerHTML = '<iframe src="https://klukt.com/widget?apikey=8vwkqvzpsi&id='+transactionId+'&amount='+amount+'&curr=BTC&email=cryptoripped@gmail.com" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
 }
 
 var checkForPayment = function(transactionId) {
