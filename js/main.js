@@ -70,7 +70,7 @@ var updatePaymentFrame = function(transactionId, amount) {
         console.log('Payment received!!', payment)
     })*/
     var userEmail = document.querySelector('#BuyModal input[name=email]').value;
-    paymentContainer.innerHTML = '<iframe src="https://klukt.com/widget.html?apikey=4ria7ge6kk&id='+transactionId+'&amount='+amount+'&curr=BTC&email='+userEmail+'" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
+    paymentContainer.innerHTML = '<iframe src="https://klukt.com/widget.html?apikey=ileust5snw&id='+transactionId+'&amount='+amount+'&curr=BTC&email='+userEmail+'" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
 }
 
 var checkForPayment = function(transactionId) {
