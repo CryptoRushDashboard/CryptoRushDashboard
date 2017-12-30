@@ -10,6 +10,9 @@
         margin: -70px 0 -100px;
         width: 830px;
         height: 530px;
+        @media screen and (max-width: 992px) {
+            margin: 0 0 -100px;
+        }
     }   
 
     .lead-gen {
