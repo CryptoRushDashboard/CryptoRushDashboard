@@ -8,6 +8,9 @@ const app = express()
 /* Templates */
 const home = pug.compileFile(__dirname + '/src/templates/home.pug')
 const faq = pug.compileFile(__dirname + '/src/templates/faq.pug')
+const buy = pug.compileFile(__dirname + '/src/templates/buy.pug')
+const features = pug.compileFile(__dirname + '/src/templates/features.pug')
+const trial = pug.compileFile(__dirname + '/src/templates/trial.pug')
 
 
 app.use(logger('dev'))
@@ -23,7 +26,19 @@ app.get('/', function(req, res, next) {
 })
 
 app.get('/faq', function(req, res, next) {
-  res.send( services({ title: 'FAQ' }) )
+  res.send( faq({ title: 'FAQ' }) )
+})
+
+app.get('/buy', function(req, res, next) {
+  res.send( buy({ title: 'Buy' }) )
+})
+
+app.get('/features', function(req, res, next) {
+  res.send( features({ title: 'Features' }) )
+})
+
+app.get('/trial', function(req, res, next) {
+  res.send( trial({ title: 'Trial' }) )
 })
 
 

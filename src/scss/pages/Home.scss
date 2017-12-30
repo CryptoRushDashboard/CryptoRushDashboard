@@ -1,3 +1,94 @@
 .Home {
-	
+    .page-header {
+        margin-bottom: 60px;
+        padding: 200px 0 0;
+    }
+    .screenshot {
+        background: url(../images/dashboard.png) no-repeat;
+        background-size: 100%;
+        display: block;
+        margin: -70px 0 -100px;
+        width: 830px;
+        height: 530px;
+    }   
+
+    .lead-gen {
+        background: $white;
+        border-radius: 3px;
+        margin-top: 30px;
+        padding: 8px 10px;
+        max-width: 360px;
+
+        input {
+            border: none;
+            color: $text-primary;
+            padding: 0;
+            font-size: 16px;
+            margin-right: 2%;
+            width: 65%;
+            font-size: 15px;
+        }
+        button {
+            background: none;
+            border-radius: 0;
+            border: none;
+            border-left: 2px solid $bg-dark;
+            box-shadow: none;
+            color: $primary;
+            padding: 0;
+            margin: 0;
+            width: 33%;
+            font-size: 15px;
+        }
+    }
+
+    #Features {
+        @media screen and (max-width: 630px) {
+            padding-top: 20px;
+        }
+        @media screen and (max-width: 480px) {
+            padding-top: 70px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 40px;
+            list-style: none;
+            
+            li {
+                padding: 20px 30px 20px 70px;
+                position: relative;
+                
+                i {
+                    color: #40abe4;
+                    border: 2px solid #40abe4;
+                    border-radius: 40px;
+                    font-size: 24px;
+                    margin-right: 18px;
+                    padding: 11px 0;
+                    text-align: center;
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                    left: 0;
+                }
+                .feature-title {
+                    color: #44505a;
+                    display: block;
+                    font-size: 17px;
+                    font-weight: 600;
+                    margin-bottom: 2px;
+                    padding-top: 8px;
+                    text-transform: capitalize;
+                }
+                .feature-desc {
+                    display: block;
+                }
+            }
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+    } 
 }

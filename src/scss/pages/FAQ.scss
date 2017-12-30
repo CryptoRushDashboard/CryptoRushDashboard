@@ -1,0 +1,25 @@
+.FAQ {
+	.FAQ-list {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: 40px;
+			
+			span {
+				display: block;
+			}
+
+			.q {
+				color: $text-secondary;
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			.a {
+
+			}
+		}
+	}
+}
