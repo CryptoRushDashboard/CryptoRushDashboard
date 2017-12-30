@@ -1,46 +1,83 @@
-doctype html
-html
-  head
-    link(rel='stylesheet', href='/css/main.css')
-    title CryptoStorm | #{ title }
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
-    link(rel="icon" href="/favicon.ico" type="image/x-icon")
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>CryptoStorm Bot | #{title}</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="CryptoStorm Bot">
+      <meta name="author" content="CryptoStorm Bot">
 
-    script(src="https://use.fontawesome.com/4b82595ae1.js")
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-47530341-4', 'auto');
-      ga('send', 'pageview');
-  body
-    .header
-      .container
-        a(href='/' class='brand')
-        button.mobile-menu.hidden-sm.hidden-md.hidden-lg
-          i(class="fa fa-bars" aria-hidden="true")
-          | Menu
-        ul.nav
-          li: a(href='/' class= title == 'Home' ? 'active' : '') Home
-          li: a(href='services' class= title == 'Services' ? 'active' : '') Services
-          li: a(href='about' class= title == 'About' ? 'active' : '') About
-          li: a(href='links' class= title == 'Links' ? 'active' : '') Links
-          li: a(href='contact' class= title == 'Contact' ? 'active' : '') Contact
-          li: a(href='locations' class= title == 'Locations' ? 'active' : '') Locations
+      <meta name="google-site-verification" content="nnWT6RasZN3i3CKbs8HQrrYWARSiWPSs8nWfaEFLi2I" />
 
-    .main-content
-      block content
+      <meta name="og:image" content=""><!-- TODO: add image -->
+      <meta name="og:title" content="By CryptoStorm">
+      <meta name="og:description" content="CryptoStorm">
+      <meta name="og:url" content="http://getcryptostorm.com">
 
-    .footer
-      .container
-        ul.nav
-          li: a(href='/' class= title == 'Home' ? 'active' : '') Home
-          li: a(href='services' class= title == 'Services' ? 'active' : '') Services
-          li: a(href='about' class= title == 'About' ? 'active' : '') About
-          li: a(href='links' class= title == 'Links' ? 'active' : '') Links
-          li: a(href='contact' class= title == 'Contact' ? 'active' : '') Contact
-          li: a(href='locations' class= title == 'Locations' ? 'active' : '') Locations
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content=""><!-- TODO: add image -->
+      <meta name="twitter:title" content="By CryptoStorm">
+      <meta name="twitter:description" content="CryptoStorm">
+      <meta name="twitter:url" content="http://getcryptostorm.com">
 
-        p &copy; 2017 All rights reserved
+      <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+  <body class=#{title}>
+    <!-- Header -->
+    <header>
+      <nav>
+          <div class="container">
+              <span class="navbar-bg"></span>
+              <div id="mobile-toggle">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <div class="col-md-4 col-xs-12 brand">
+                  <a href="."><span class="logo"></span>CryptoStorm</a>
+              </div>
+              <div class="col-md-8 col-xs-12 nav-links">
+                  <a href="#Features">Features</a>
+                  <a href="#HowItWorks">How It Works</a>
+                  <a href="https://docs.google.com/document/d/1xmi3fz4TWkERAlPC7RlPQ3kEmdSznBzpo3oT8wCy534/edit?usp=sharing">FAQ</a>
+                  <a id="demo" href="promo.html" class="track-click">Free Trial</a>
+                  <a id="buy" class="track-click">Buy</a>
+              </div>
+          </div>
+      </nav>
+    </header>
+    <!-- End header -->
+
+    <!-- Page Content -->
+    block content
+    <!-- End page content -->
+
+    <!-- Footer -->
+    <div class="footer-wrapper">
+        <div id="Contact">
+            <div class="container">
+                <p>Questions or comments? Get in touch at <a href="https://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2017 CryptoStorm. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- End footer -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script type="text/javascript" src="https://klukt.com/klukt.js"></script>
+    <script src="js/main.js"></script>
+    <!-- End scripts -->
+
+  </body>
+</html>

@@ -2,14 +2,6 @@
   "name": "cryptostorm-www-github",
   "version": "1.0.0",
   "main": "server.js",
-  "scripts": {
-    "build-css": "stylus src/styles/main.styl -o static/css",
-    "watch-css": "stylus src/styles/main.styl -o static/css -w",
-    "clean": "rm -rf static/css && mkdir -p static/css",
-    "build": "npm run clean && npm run build-css",
-    "watch": "npm run clean && npm run watch-css & nodemon server -e js,pug",
-    "start": "node server"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CryptoRushDashboard/CryptoRushDashboard.github.io.git"
@@ -22,7 +14,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "morgan": "^1.9.0",
-    "pug": "^2.0.0-rc.4"
+    "pug": "^2.0.0-rc.4",
+    "run-sequence": "^2.2.0"
   }
 }
