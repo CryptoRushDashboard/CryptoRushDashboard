@@ -44,7 +44,7 @@ a {
     color: #40abe4;
     cursor: pointer;
 }
-a.button {
+a.button, button {
     background: rgba(34,136,234,1);
     background: -moz-linear-gradient(45deg, rgba(34,136,234,1) 0%, rgba(106,222,219,1) 100%);
     background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(34,136,234,1)), color-stop(100%, rgba(106,222,219,1)));
@@ -199,6 +199,7 @@ nav .nav-links {
         display: none;
     }
     body.open nav .nav-links {
+
         display: block;
         padding: 20vh 0 40px;
     }
