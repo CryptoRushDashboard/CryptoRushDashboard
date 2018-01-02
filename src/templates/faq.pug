@@ -2,32 +2,61 @@ extend default
 
 block content
   
-  <section class="page-header centered-h">
+  <section class="page-header">
     <div class="container">
       <h1>FAQ</h1>
+      <div class="breadcrumb">
+        <a href="/">Home </a> <i class="fa fa-angle-right" aria-hidden="true"></i> FAQ
+      </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-        <ul class="FAQ-list">
-            <li>
-                <span class="q">Vestibulum fermentum viverra sem ac tempor?</span>
-                <span class="a">Mauris auctor dictum ipsum. Sed a nisi lectus. Duis eu nisl nec urna gravida molestie. Proin in fermentum nisl, sit amet gravida neque. Morbi sed suscipit dolor, vehicula venenatis risus. Aliquam sagittis nisi id libero sollicitudin malesuada. In nec mauris vulputate, aliquet nisl sit amet, bibendum mi.</span>
-            </li>
-            <li>
-                <span class="q">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?</span>
-                <span class="a">Nam sit amet eleifend mauris, vitae euismod massa. In viverra porta enim sit amet porta. Cras iaculis augue vel dui elementum blandit at sit amet arcu. Sed non lectus eu nibh vehicula laoreet ut sit amet sem. Pellentesque commodo at diam et maximus. Etiam a placerat quam.</span>
-            </li>
-            <li>
-                <span class="q">Vestibulum fermentum viverra sem ac tempor?</span>
-                <span class="a">Mauris auctor dictum ipsum. Sed a nisi lectus. Duis eu nisl nec urna gravida molestie. Proin in fermentum nisl, sit amet gravida neque. Morbi sed suscipit dolor, vehicula venenatis risus. Aliquam sagittis nisi id libero sollicitudin malesuada. In nec mauris vulputate, aliquet nisl sit amet, bibendum mi.</span>
-            </li>
-            <li>
-                <span class="q">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas?</span>
-                <span class="a">Nam sit amet eleifend mauris, vitae euismod massa. In viverra porta enim sit amet porta. Cras iaculis augue vel dui elementum blandit at sit amet arcu. Sed non lectus eu nibh vehicula laoreet ut sit amet sem. Pellentesque commodo at diam et maximus. Etiam a placerat quam.</span>
-            </li>
-        </ul>
+      <p><strong>If you don’t find your answer here, send us a message at <a href="http://t.me/CryptoStorm" target="_blank">http://t.me/CryptoStorm</a></strong></p>
+      <ul class="FAQ-list">
+        <li id="syncTime">
+          <span class="q">How do I sync my system clock?</span>
+          <div class="a">
+            <p>Binance has strict requirements on API calls to help prevent replay attacks - one requirement being that your computer's clock cannot be ahead of Binance's. Note that your API keys are not stored on our servers, so all calls to the Binance API are executed locally from your machine. This is why your system clock needs to be synced.</p>
+            <p>Follow these steps to re-sync your system clock.</p>
+            <a href="https://www.guidingtech.com/3119/windows-clock-sync/" target="_blank">Instructions for Windows</br></a>
+            <a href="http://www.macinstruct.com/node/92" target="_blank">Instructions for Mac</a>
+          </div>
+        </li>
+        <li>
+          <span class="q">How do I configure my BUY(S)?</span>
+          <div class="a">
+            <p>Lorem</p>
+          </div>
+        </li>
+        <li>
+          <span class="q">How do I configure my SELL(S)?</span>
+          <div class="a">
+            <p>Lorem</p>
+          </div>
+        </li>
+        <li>
+          <span class="q">How do I cancel open orders?</span>
+          <div class="a">
+            <p>There are two cancel actions in the left column of CryptoStorm.</p>
+            <p><strong>CANCEL:</strong> Simply cancels open orders for the current coin. If there are no open orders, it does nothing.</p>
+            <p><strong>CANCEL AND SELL:</strong> Cancels open orders for the current coin (if there are any), then sells the entire balance at the last price - 5%. This ensures that the sell order will be filled immediately.</p>
+          </div>
+        </li>
+        <li>
+          <span class="q">What are High potential coins?</span>
+          <div class="a">
+            <p>Lorem</p>
+          </div>
+        </li>
+        <li>
+          <span class="q">What is the Volume breakout indicator?</span>
+          <div class="a">
+            <p>Lorem</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 

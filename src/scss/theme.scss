@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: $white;
+    color: $text-secondary;
     font-size: 40px;
     margin-bottom: 10px;
     font-weight: 400;
@@ -120,12 +120,18 @@ header {
     text-align: center;
 }
 .page-header {
-    background: $primary;
-    padding: 130px 0 70px;
+    background: $bg;
+    padding: 100px 0 40px;
+    .breadcrumb {
+        i {
+            margin: 0 4px;
+        }
+    }
 }
 
 nav {
-    padding: 20px 0;
+    background: $primary;
+    padding: 8px 0;
     position: absolute;
     top: 0;
     width: 100%;
@@ -133,7 +139,7 @@ nav {
     
     .brand {
         text-align: left;
-        padding-top: 8px;
+        padding: 8px 0 0;
         z-index: 101;
     }
     .brand .logo {
@@ -200,7 +206,7 @@ nav .nav-links a {
 }
 
 section {
-    padding: 100px 0 120px;
+    padding: 80px 0 120px;
     
     &.alt-background {
         background: #f5f8fa;

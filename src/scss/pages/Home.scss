@@ -1,5 +1,10 @@
 .Home {
+    h1 {
+        color: $white;
+    }
+
     .page-header {
+        background: $primary;
         margin-bottom: 60px;
         padding: 200px 0 0;
     }
