@@ -5,6 +5,7 @@
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
     padding-bottom: 242px;
     position: relative;
 
@@ -26,6 +27,7 @@ h2 {
     font-size: 16px;
 }
 h3 {
+    color: $text-secondary;
     text-align: center;
     font-size: 22px;
     font-weight: 400;
