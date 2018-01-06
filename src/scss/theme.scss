@@ -6,7 +6,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    padding-bottom: 202px;
+    padding-bottom: 230px;
     position: relative;
 
     &.open {
@@ -219,7 +219,7 @@ section {
     }
     &.alt-background-dark {
         background: #e4ecf1;
-        padding: 80px 0;
+        padding: 70px 0;
     }
     &.centered-h {
         text-align: center;
