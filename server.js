@@ -11,6 +11,7 @@ const faq = pug.compileFile(__dirname + '/src/templates/faq.pug')
 const buy = pug.compileFile(__dirname + '/src/templates/buy.pug')
 const features = pug.compileFile(__dirname + '/src/templates/features.pug')
 const trial = pug.compileFile(__dirname + '/src/templates/trial.pug')
+const download = pug.compileFile(__dirname + '/src/templates/download.pug')
 
 
 app.use(logger('dev'))
@@ -39,6 +40,10 @@ app.get('/features', function(req, res, next) {
 
 app.get('/trial', function(req, res, next) {
   res.send( trial({ title: 'Trial' }) )
+})
+
+app.get('/download', function(req, res, next) {
+  res.send( download({ title: 'Download' }) )
 })
 
 
