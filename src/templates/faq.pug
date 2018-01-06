@@ -15,8 +15,11 @@ block content
     <div class="container">
       <p><strong>If you don’t find your answer here, send us a message at <a href="http://t.me/CryptoStorm" target="_blank">http://t.me/CryptoStorm</a></strong></p>
       <ul class="FAQ-list">
-        <li>
-          <span class="q">What is AUTO mode?</span>
+        <li class="active">
+          <span class="q">What is AUTO mode? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>In AUTO mode, you can trigger the "Execute Auto" action (by clicking the button, or by hitting the "Enter" key from the market selector). This will first execute all orders in your buy configuration, and then execute all orders in your sell configuration.</p>
             <p>Follow these steps to execute auto trades:</p>
@@ -27,26 +30,38 @@ block content
           </div>
         </li>
         <li>
-          <span class="q">What is MANUAL mode?</span>
+          <span class="q">What is MANUAL mode? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>In MANUAL mode, you can choose to "Execute Buys" or "Execute Sells". Doing so will issue all orders in your buy or sell configuration respectively.</p>
             <p><strong>Note:</strong> In manual mode, all rates are absolute values with respect to the quote currency.</p>
           </div>
         </li>
         <li>
-          <span class="q">How do I configure my BUY(S)?</span>
+          <span class="q">How do I configure my BUY(S)? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>In the Buy Configuration box, you may create as many buy points as you’d like, they will be executed in parallel. To configure one buy point, enter the amount you would like to buy, and the rate (see AUTO and MANUAL mode). You can add and remove buy points by clicking “Add buy” and “Remove buy” respectively.</p>
           </div>
         </li>
         <li>
-          <span class="q">How do I configure my SELL(S)?</span>
+          <span class="q">How do I configure my SELL(S)? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>In the Sell Configuration box, you may create as many sell points as you’d like, they will be executed in parallel. To configure one sell point, enter the amount you would like to sell, and the rate (see AUTO and MANUAL mode). You can add and remove sell points by clicking “Add sell” and “Remove sell” respectively.</p>
           </div>
         </li>
         <li>
-          <span class="q">Why didn't my order go through?</span>
+          <span class="q">Why didn't my order go through? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>This could happen for a few reasons:</p>
             <p><strong>1.</strong> Your API keys are misconfigured. For CryptoStorm, we need to have Read Info and Trade Limit enabled on your Bittrex or Binance API keys.<br> For more information on creating and managing <strong>Bittrex</strong> API keys, follow <a href="https://coinigy.freshdesk.com/support/solutions/articles/1000087495-how-do-i-find-my-api-key-on-bittrex-com-" target="_blank">these steps</a>. <br> For more information on creating and managing <strong>Binance</strong> API keys, follow <a href="https://coinigy.freshdesk.com/support/solutions/articles/1000256048-how-do-i-find-my-api-key-on-binance-com-" target="_blank">these steps</a>.
@@ -56,7 +71,10 @@ block content
           </div>
         </li>
         <li>
-          <span class="q">How do I cancel open orders?</span>
+          <span class="q">How do I cancel open orders? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>There are two cancel actions in the left column of CryptoStorm.</p>
             <p><strong>CANCEL:</strong> Simply cancels open orders for the current coin. If there are no open orders, it does nothing.</p>
@@ -64,19 +82,28 @@ block content
           </div>
         </li>
         <li>
-          <span class="q">What are High potential coins?</span>
+          <span class="q">What are High potential coins? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>High potential coins indicate markets that can experience large price swings with low volume. The potential price increase is expressed with respect to 1 BTC, 5 BTC, and 10 BTC.</p>
           </div>
         </li>
         <li>
-          <span class="q">What is the Volume breakout indicator?</span>
+          <span class="q">What is the Volume breakout indicator? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>Lorem</p>
           </div>
         </li>
         <li id="syncTime">
-          <span class="q">How do I sync my system clock?</span>
+          <span class="q">How do I sync my system clock? 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </span>
           <div class="a">
             <p>Binance has strict requirements on API calls to help prevent replay attacks - one requirement being that your computer's clock cannot be ahead of Binance's. Note that your API keys are not stored on our servers, so all calls to the Binance API are executed locally from your machine. This is why your system clock needs to be synced.</p>
             <p>Follow these steps to re-sync your system clock.</p>
@@ -100,3 +127,4 @@ block content
       </div>
     </div>
   </section>
+

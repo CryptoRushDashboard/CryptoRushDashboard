@@ -1,25 +1,62 @@
 .FAQ {
-	ul.FAQ-list {
-		margin: 0;
-		padding: 0;
+    ul.FAQ-list {
+        margin: 0;
+        padding: 40px 0 0;
 
-		li {
-			list-style: none;
-			margin: 40px 0;
-			
-			span {
-				display: block;
-			}
+        li {
+            list-style: none;
+            margin: 0 0 20px;
+            
+            span {
+                display: block;
+            }
 
-			.q {
-				color: $text-secondary;
-				font-size: 22px;
-				font-weight: 600;
-				margin-bottom: 10px;
-			}
-			.a {
+            &.active {
+                .q {
+                    .fa.fa-angle-right {
+                        display: none;
+                    }
+                    .fa.fa-angle-down {
+                        display: block;
+                    }
+                }
+                .a {
+                    display: block;
+                }
+            }
 
-			}
-		}
-	}
+            .q {
+                color: $text-secondary;
+                cursor: pointer;
+                border-bottom: 1px solid #eeeeee;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding-bottom: 20px;
+                @include transition(all 0.2s ease-in-out);
+
+                &:hover {
+                    color: $primary;
+                    i {
+                        color: $primary;
+                    }
+                }
+
+                i {
+                    float: right;
+                    margin-top: 4px;
+                    &.fa.fa-angle-right {
+                        display: block;
+                    }
+                    &.fa.fa-angle-down {
+                        display: none;
+                    }
+                }
+            }
+            .a {
+                display: none;
+                margin-bottom: 40px;
+            }
+        }
+    }
 }

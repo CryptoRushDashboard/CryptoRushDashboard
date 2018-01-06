@@ -194,3 +194,19 @@ if (urlStart >= 0)
     saveDiscountCode(currentPage.substr(urlStart + 13, 6))
 else
     getDiscountCode()
+
+
+
+
+/* FAQ Accordion */
+let faqItems = document.querySelectorAll('.FAQ-list li')
+faqItems.forEach(function(e) {
+    e.addEventListener('click', function(e) {
+        if (e.target.closest('li').className == "active")
+            e.target.closest('li').className = ""
+        else
+            e.target.closest('li').className = "active"
+    })
+})
+
+
