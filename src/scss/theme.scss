@@ -1,12 +1,15 @@
 * {
     font-family: 'Nunito', sans-serif;
     color: $text-primary;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    padding-bottom: 230px;
+    padding-bottom: 255px;
     position: relative;
 
     &.open {
@@ -30,7 +33,7 @@ h3 {
     color: $text-secondary;
     text-align: center;
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
 }
@@ -38,6 +41,10 @@ h4 {
     text-align: center;
     font-weight: 400;
     margin: 12px 0 50px;
+}
+p {
+    font-size: 15px;
+    line-height: 1.4;
 }
 a {
     color: $primary;
@@ -53,13 +60,13 @@ button, a.button {
     padding: 14px 32px;
     font-size: 16px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     box-shadow: 0px 4px 22px rgba(52, 113, 167, 0.3);
     margin-top: 6px;
     display: inline-block;
     max-width: 170px;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 18px;
     &.light {
         background: $white;
         color: $primary;
@@ -99,18 +106,6 @@ input {
         border-bottom: 1px solid $primary;
         outline: none;
     }
-}
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #e4ecf1;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #e4ecf1;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #e4ecf1;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: #e4ecf1;
 }
 
 .center {
@@ -161,6 +156,7 @@ nav {
     .brand a {
         color: $white;
         font-size: 17px;
+        font-weight: 700;
     }
     .nav-links {
         text-align: right;
@@ -191,6 +187,7 @@ nav .nav-links a {
     color: $white;
     display: inline-block;
     font-size: 13px;
+    font-weight: 700;
     margin-top: 2px;
     padding: 0 16px;
     text-align: center;
@@ -221,15 +218,15 @@ section {
         background: #e4ecf1;
         padding: 70px 0;
     }
-    &.centered-h {
-        text-align: center;
-    }
-    &.centered-v {
-        top: 50%;
-        position: absolute;
-        width: 100%;
-        transform: translateY(-60%);
-    }
+}
+.centered-h {
+    text-align: center;
+}
+.centered-v {
+    top: 50%;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-60%);
 }
 
 .announcement {
@@ -238,7 +235,6 @@ section {
     color: $white;
     display: inline-block;
     font-size: 14px;
-    font-weight: 100;
     line-height: 25px;
     padding: 0 10px 1px 6px;
     
@@ -305,6 +301,11 @@ section {
         font-weight: 100;
         p, a {
             color: #b7bfc5;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        a {
+            font-weight: 900;
         }
         a:hover {
             color: $primary;
@@ -312,19 +313,21 @@ section {
     }
     footer {
         p {
+            color: #677077;
             text-align: center;
-            font-size: 12px;
+            font-size: 13px;
             padding: 0 0 40px;
         }
 
         .social-links {
-            margin-bottom: 10px;
+            margin: 20px 0;
             text-align: center;
             .link {
                 display: inline-block;
                 i {
-                    border: 1px solid $text-primary;
+                    border: 1px solid #677077;
                     border-radius: 20px;
+                    color: #677077;
                     text-align: center;
                     margin-right: 10px;
                     padding: 6px 0 0;

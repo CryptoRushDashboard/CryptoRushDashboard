@@ -1,3 +1,43 @@
 .Features {
-	
+    h4 {
+        color: $primary;
+        font-size: 17px;
+        font-weight: 900;
+        margin: 0;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .feature-list {
+        background: url(../images/bg-hex.png) no-repeat center center;
+        background-size: 60%;
+
+        .row {
+            padding: 50px 0;
+
+            &:first-of-type {
+                padding-top: 10px;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        .hr {
+            display: block;
+            border-bottom: 2px solid $text-primary;
+            margin: 16px 0 30px;
+            width: 200px;
+        }
+    }
+
+    .feature-img {
+        display: block;
+        height: 200px;
+
+        &.feature-1 {
+            background: url(../images/feature1.png) no-repeat center center;
+            background-size: auto 100%;
+        }
+    }   
 }
