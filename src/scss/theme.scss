@@ -26,7 +26,7 @@ h1 {
 }
 h2 {
     color: $white;
-    font-weight: 100;
+    font-weight: 400;
     font-size: 16px;
 }
 h3 {
@@ -88,7 +88,6 @@ label {
     display: block;
     color: #44505a;
     font-size: 22px;
-    font-weight: 100;
     text-align: left;
 }
 input {
@@ -99,7 +98,6 @@ input {
     color: $primary;
     padding: 30px 0 10px;
     font-size: 30px;
-    font-weight: 100;
     width: 100%;   
     
     &:focus, &:active {
@@ -175,7 +173,7 @@ nav {
         font-size: 22px;
         margin-top: 20px;
         text-align: center;
-        font-weight: 100;
+        font-weight: 400;
         width: 100%;
     }
     body.open  nav .nav-links a#demo {
@@ -272,7 +270,7 @@ section {
         text-align: left;
         font-size: 28px;
         text-transform: none;
-        font-weight: 100;
+        font-weight: 400;
         color: $primary;
         line-height: 1;
         @media screen and (max-width: 992px) {
@@ -297,8 +295,6 @@ section {
     #Contact {
         padding: 60px 0 0;
         text-align: center;
-        font-size: 18px;
-        font-weight: 100;
         p, a {
             color: #b7bfc5;
             font-size: 16px;
