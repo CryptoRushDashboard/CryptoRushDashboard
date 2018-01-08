@@ -8,6 +8,29 @@
         text-transform: uppercase;
     }
 
+    .quick-links {
+        padding: 40px 0 0;
+        .container {
+            border: 1px solid #dadfe4;
+            border-radius: 6px;
+            padding: 10px 30px;
+            h3 {
+                text-align: left;
+                font-size: 18px;
+                margin-top: 8px;
+            }
+            ul {
+                margin: 0;
+                padding: 10px 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 2px;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
     .feature-list {
         background: url(../images/bg-hex.png) no-repeat center center;
         background-size: 60%;
@@ -37,6 +60,14 @@
 
         &.feature-1 {
             background: url(../images/feature1.png) no-repeat center center;
+            background-size: auto 100%;
+        }
+        &.feature-2 {
+            background: url(../images/feature2.png) no-repeat center center;
+            background-size: auto 100%;
+        }
+        &.feature-3 {
+            background: url(../images/feature3.png) no-repeat center center;
             background-size: auto 100%;
         }
     }   
