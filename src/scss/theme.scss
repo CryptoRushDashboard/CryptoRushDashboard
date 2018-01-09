@@ -33,7 +33,7 @@ h2 {
 h3 {
     color: $text-secondary;
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -118,9 +118,14 @@ input {
 /* LAYOUT */
 header {
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 .page-header {
-    background: $bg;
+    background: $bg-dark;
     padding: 80px 0 20px;
     .breadcrumb {
         i {
@@ -130,7 +135,8 @@ header {
 }
 
 nav {
-    background: $primary;
+    background: $white;
+    border-bottom: 2px solid $bg-dark;
     padding: 8px 0;
     position: absolute;
     top: 0;
@@ -139,7 +145,7 @@ nav {
     
     .brand {
         text-align: left;
-        padding: 6px 0 1px;
+        padding: 7px 0 1px;
         z-index: 101;
     }
     .brand .logo {
@@ -153,9 +159,10 @@ nav {
         width: 40px;
     }
     .brand a {
-        color: $white;
-        font-size: 17px;
+        color: $text-secondary;
+        font-size: 20px;
         font-weight: 700;
+        padding-left: 18px;
     }
     .nav-links {
         text-align: right;
@@ -183,9 +190,9 @@ nav {
     }
 }
 nav .nav-links a {
-    color: $white;
+    color: $text-primary;
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     margin-top: 2px;
     padding: 0 16px;
@@ -194,14 +201,16 @@ nav .nav-links a {
     &#buy {
         padding: 10px 16px;
         border-radius: 4px;
-        background: $white;
-        color: $primary;
+        background: $primary;
+        color: $white;
         min-width: 80px;
+        text-transform: none;
     }
     &#demo {
         padding: 10px 16px;
-        border: 1px solid $white;
+        border: 1px solid $primary;
         border-radius: 4px;
+        color: $primary;
         margin-right: 12px;
         min-width: 80px;
     }
@@ -483,7 +492,7 @@ section {
         position: absolute;
         height: 2px;
         width: 50%;
-        background: $white;
+        background: $primary;
         opacity: 1;
         @include transform(rotate(0deg));
         @include transition(.2s ease-in-out);
@@ -507,13 +516,26 @@ section {
 }
 
 body.open {
-    .navbar-bg {
-        border-radius: 0;
-        height: 100%;
-        width: 100%;
+    nav {
+        .navbar-bg {
+            border-radius: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .nav-links a {
+            color: $white;
+            &#demo, &#buy {
+                color: $white;
+                border: 1px solid $white;
+                max-width: 200px;
+                display: block;
+                margin: 20px auto;
+            }
+        }
     }
 
     #mobile-toggle span {
+        background: $white; 
         &:nth-child(1), &:nth-child(6) {
             @include transform(rotate(45deg));
         }

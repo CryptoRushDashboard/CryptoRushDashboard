@@ -21,7 +21,15 @@
         width: 830px;
         height: 530px;
         @media screen and (max-width: 992px) {
-            margin: 0 0 -100px;
+            margin: 50px 0 -210px;
+            height: 500px;
+            width: auto;
+        }
+        @media screen and (max-width: 650px) {
+            height: 430px;
+        }
+        @media screen and (max-width: 500px) {
+            height: 350px;
         }
     }   
 
