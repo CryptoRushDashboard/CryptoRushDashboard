@@ -166,6 +166,7 @@ nav {
         padding-left: 18px;
         &:active &:focus {
             outline: none;
+            text-decoration: none;
         }
     }
     .nav-links {
