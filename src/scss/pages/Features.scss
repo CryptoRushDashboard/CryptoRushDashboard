@@ -36,7 +36,7 @@
         background-size: 60%;
 
         .row {
-            padding: 50px 0;
+            padding: 40px 0;
 
             &:first-of-type {
                 padding: 10px 0 30px;
@@ -81,6 +81,14 @@
         &.feature-6 {
             background: url(../images/feature6.png) no-repeat center center;
             background-size: auto 100%;
+        }
+        &.feature-7 {
+            background: url(../images/feature7.png) no-repeat center center;
+            background-size: auto 100%;
+        }
+        &.feature-8 {
+            background: url(../images/feature8.png) no-repeat center center;
+            background-size: auto 60%;
         }
     }   
 }
