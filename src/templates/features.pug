@@ -61,7 +61,13 @@ block content
         .col-md-8
           h4 Cancel All and Cancel and Sell
           .hr
-          p The Cancel All and Cancel and Sell button come in handy when you want to bail from a trade as fast as possible. Percentage below
+          p The <strong>Cancel All</strong>  and <strong>Cancel and Sell</strong>  button come in handy when you want to <strong>bail from a trade as fast as possible.</strong>
+
+          p The <strong>Cancel All</strong> is always available, when clicked, it instatly cancels all open orders <em>for the currently selected coin and exchange.</em>
+
+          p <strong>Cancel and Sell</strong> is only available in auto mode. On click, it will immediately <em>cancel all open orders</em> for the currently selected coin and exchange, <em>retrieve its balance</em> and <strong>sell all of it</strong>. As fast as exchanges allow.
+
+          p <strong>Tip:</strong> You can also cancel specific orders directly from the Open Orders list.
     </div>
   </section>
 
@@ -70,7 +76,7 @@ block content
       h3 Trading in Manual mode
 
       .row
-        p.col-md-8.col-md-offset-2.centered-h Manual mode is a quick way for you to determine all your sell or buy points, and execute them on any of the supported exchanges with one simple click. It's a central way of managing your trades in one hub.
+        p.col-md-8.col-md-offset-2.centered-h <strong>Manual mode</strong> is a quick way for you to configure and execute one or multiple trades at the same time on any of the supported exchanges with one simple click. It's a central way of managing your trades in one hub.
 
       .row
         .col-md-4
@@ -78,8 +84,12 @@ block content
         .col-md-8
           h4 Configuration
           .hr
-          p Define the amount you want to buy/sell in the base currency, and rate at which you want to buy/sell in the quote currency. Create infinitely many of these if you want. Then execute them all with one click. The manual mode is essentially the same functionally as placing an order through an exchange app.
-          p Keep in mind that you need sufficient balance for all orders, and each order needs to be above the minimum trade amount.
+
+          p <strong>Define the amount</strong> you want to buy/sell <em>in the base currency</em>, and the rate at which you want to buy/sell it at in the quote currency. Repeat. Then execute them all with one click. Manual mode is provides essentially the same functionally as placing an order directly through the exchange, but faster.
+
+          p Keep in mind that <strong>you need sufficient balance</strong> for all orders, and each order needs to be <strong>above the minimum trade amount.</strong>
+
+          p <strong>Note:</strong> Binance has strict rules about the <strong>minimum trade amount</strong> and the <strong>significant digits</strong> of prices and amounts. <em>For example</em>, you cannot issue a 0.0015 order for BTC-ETH, but you can issue a 0.002 order, because Binance limits ETH orders at 3 significant digits. <strong>The limit varies with each pair.</strong> CryptoStorm automatically takes care of verifying the number's precision is correct and it performs rounding when needed.
 
       .row
         .col-md-4
@@ -87,7 +97,10 @@ block content
         .col-md-8
           h4 The Chart
           .hr
-          p Verify that you've entered the correct buy/sell rates by seeing the visual representation on the second-by-second chart. 
+
+          p The <strong>real-time chart</strong> displays a <em>second by second</em> representation of the current price. Every single trade executed on the Exchange updates the position of the line in the chart.
+
+          p On the chart you can see markers for both your configured orders (in <strong style="color: #62312e;">dark red</strong> for sells and <strong style="color: #334b2e;">dark green</strong> for buys) and for your open orders (in <strong style="color: #f74d43;">bright red</strong> and <strong style="color: #67af4f;">bright green</strong>).
 
       .row
         .col-md-4
@@ -96,6 +109,8 @@ block content
           h4 Cancel All
           .hr
           p The Cancel All action allows you to easily and quickly remove all open orders for a selected market on a selected exchange. This can be useful when you observe market swings and want to adjust your open orders before the opportunity is gone.
+
+          p <strong>Tip:</strong> You can also cancel specific orders directly from the Open Orders list.
     </div>
   </section>
 
