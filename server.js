@@ -9,7 +9,7 @@ const app = express()
 const home = pug.compileFile(__dirname + '/src/templates/home.pug')
 const faq = pug.compileFile(__dirname + '/src/templates/faq.pug')
 const buy = pug.compileFile(__dirname + '/src/templates/buy.pug')
-const features = pug.compileFile(__dirname + '/src/templates/features.pug')
+const guide = pug.compileFile(__dirname + '/src/templates/features.pug')
 const trial = pug.compileFile(__dirname + '/src/templates/trial.pug')
 const download = pug.compileFile(__dirname + '/src/templates/download.pug')
 
@@ -34,8 +34,8 @@ app.get('/buy', function(req, res, next) {
   res.send( buy({ title: 'Buy' }) )
 })
 
-app.get('/features', function(req, res, next) {
-  res.send( features({ title: 'Features' }) )
+app.get('/guide', function(req, res, next) {
+  res.send( guide({ title: 'UserGuide' }) )
 })
 
 app.get('/trial', function(req, res, next) {
