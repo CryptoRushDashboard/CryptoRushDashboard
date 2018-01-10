@@ -37,9 +37,11 @@ block content
         .col-md-8
           h4 Configuration
           .hr
-          p In auto mode, you define the amount you want to buy and sell with respect to the quote currency (eg. for BTC-ETH, in BTC or for USDT-ETH in USDT), and you set the price by configuring a percentage above (or below) the current price that you want to buy at.
+          p In <strong>auto mode</strong>, you define the amount you want to buy and sell <em>with respect to the quote currency</em> (eg. for BTC-ETH, in BTC or for USDT-ETH in USDT), and you set the price by configuring <strong>a percentage above</strong> (or below) the current price that you want to buy at.
 
           p <em>For example</em>, if you're expecting a low volume coin to rise sharply after a big announcement you could setup the buy configuration at 5% above the current price, this will ensure that even if the price rises fast eating through the order book, your order will still go through right away.
+
+          p The <strong>percent above</strong> parameter (for all buys and sells) is based on the current price at the time you press the <strong>Execute Auto</strong> button. So if you're buying BTC-ETH, the current price is 0.1 and you indicate +10% for the buy and +20% for the sell, CryptoStorm will put a buy order in for 0.11 BTC, wait until it is filled, then put a sell order at 0.12 BTC.
 
           p It's important to note that, especially with low volume coins, the order book must have enough volume for the order to go through instantly.
 
@@ -49,7 +51,9 @@ block content
         .col-md-8
           h4 The Chart
           .hr
-          p You can see exactly where the buy and sell points you configured are positioned in the real time chart. The chart shows second by second data and is updated in real time with every single incoming trade from the exchange. All trade markers on the chart lock as soon as you start a trade, so you can keep track of every trade in real time.
+          p The <strong>real-time chart</strong> displays a <em>second by second</em> representation of the current price. Every single trade executed on the Exchange updates the position of the line in the chart.
+
+          p On the chart you can see markers for both your configured orders (in <strong style="color: #62312e;">dark red</strong> for sells and <strong style="color: #334b2e;">dark green</strong> for buys) and for your open orders (in <strong style="color: #f74d43;">bright red</strong> and <strong style="color: #67af4f;">bright green</strong>).
 
       .row
         .col-md-4
