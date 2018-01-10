@@ -1,6 +1,7 @@
 // config
 // var baseUrl = 'http://localhost:3000'
-var baseUrl = 'http://104.131.11.223'
+// var baseUrl = 'http://104.131.11.223'
+var baseUrl = 'https://api.getcryptostorm.com'
 var transaction = {}
 var paymentTimer = null
 var currentPage = window.location.href.toLowerCase()
