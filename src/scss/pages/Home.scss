@@ -112,4 +112,37 @@
             margin: 0 auto;
         }
     } 
+
+    #Pricing {
+        .pricing-box {
+            border: 1px solid #e4ecf1;
+            padding: 30px 0 40px;
+            text-align: center;
+            p {
+                margin: 0;
+                &:first-of-type {
+                    color: $primary;
+                    font-size: 40px;
+                }
+                &:last-of-type {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                }
+            }
+        }
+        .pricing-details {
+            ul {
+                margin: 14px 0 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+                li {
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                    i {
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+    }
 }
