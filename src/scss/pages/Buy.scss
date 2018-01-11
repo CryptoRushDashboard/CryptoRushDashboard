@@ -1,5 +1,5 @@
 .Buy {
-    #BuyForm {
+    #BuyForm-1, #BuyForm-2 {
         ul {
             list-style: none;
             text-align: left;
@@ -19,7 +19,7 @@
         color: $primary;
         font-size: 12px;
     }
-    #PaymentSuccess, #PaymentFail {
+    #BuyForm-2, #PaymentSuccess, #PaymentFail {
         display: none;
     }   
 }
