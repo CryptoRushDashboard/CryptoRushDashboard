@@ -9,7 +9,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
-    padding-bottom: 255px;
+    padding-bottom: 295px;
     position: relative;
 
     &.open {
@@ -37,6 +37,9 @@ h3 {
     font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
+    &.left {
+        text-align: left;
+    }
 }
 h4 {
     text-align: center;
@@ -349,6 +352,21 @@ section {
                         color: $primary;
                         cursor: pointer;
                     }
+                }
+            }
+        }
+        .sub-links {
+            a {
+                color: #b7bfc5;
+                display: inline-block;
+                font-weight: 800;
+                margin-bottom: 20px;
+                padding: 0px 12px;
+                &:not(:last-child) {
+                    border-right: 1px solid $text-primary;
+                }
+                &:hover {
+                    color: $primary;
                 }
             }
         }
