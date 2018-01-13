@@ -145,22 +145,25 @@ var hideModal = function(modalId) {
 }
 
 
-document.getElementById('continuePayment').addEventListener('click', function(e) {
-    // No email
-    if (document.querySelector('#BuyForm-1 input[name=email]').value == '') {
-        document.querySelector('.email-error').style.display = 'block'
-    } 
-    // No T&C
-    else if (!document.querySelector('#BuyForm-1 input[name=terms]').checked) {
-        document.querySelector('.terms-error').style.display = 'block'
-    } 
-    // Good to go
-    else {
-        initPayment(null)
-        document.getElementById('BuyForm-1').style.display = 'none'
-        document.getElementById('BuyForm-2').style.display = 'block'
-    }
-})
+let continueBtn = document.getElementById('continuePayment')
+if (continueBtn) {
+    continueBtn.addEventListener('click', function(e) {
+        // No email
+        if (document.querySelector('#BuyForm-1 input[name=email]').value == '') {
+            document.querySelector('.email-error').style.display = 'block'
+        } 
+        // No T&C
+        else if (!document.querySelector('#BuyForm-1 input[name=terms]').checked) {
+            document.querySelector('.terms-error').style.display = 'block'
+        } 
+        // Good to go
+        else {
+            initPayment(null)
+            document.getElementById('BuyForm-1').style.display = 'none'
+            document.getElementById('BuyForm-2').style.display = 'block'
+        }
+    })
+}
 
 
 // Handle discount code in query string
