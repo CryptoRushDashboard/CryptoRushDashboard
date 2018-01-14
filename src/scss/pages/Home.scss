@@ -69,6 +69,31 @@
         }
     }
 
+    #WhatIsCS {
+        .WhatIsCS-item {
+            &:before {
+                background: $primary;
+                border-radius: 10px;
+                box-shadow: 0px 7px 30px rgba(51, 112, 154, 0.4);
+                content: '';
+                display: block;
+                width: 80px;
+                height: 80px;
+                margin: 30px auto 40px;
+            }
+            .WhatIsCS-header {
+                color: $text-secondary;
+                display: block;
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            .WhatIsCS-desc {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
+    }
+
     #Features {
         @media screen and (max-width: 630px) {
             padding-top: 20px;
@@ -118,4 +143,37 @@
             margin: 0 auto;
         }
     } 
+
+    #Pricing {
+        .pricing-box {
+            border: 1px solid #e4ecf1;
+            padding: 30px 0 40px;
+            text-align: center;
+            p {
+                margin: 0;
+                &:first-of-type {
+                    color: $primary;
+                    font-size: 40px;
+                }
+                &:not(:first-of-type) {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                }
+            }
+        }
+        .pricing-details {
+            ul {
+                margin: 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+                li {
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                    i {
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -13,6 +13,10 @@ const guide = pug.compileFile(__dirname + '/src/templates/features.pug')
 const trial = pug.compileFile(__dirname + '/src/templates/trial.pug')
 const download = pug.compileFile(__dirname + '/src/templates/download.pug')
 
+const affiliate = pug.compileFile(__dirname + '/src/templates/affiliate.pug')
+const terms = pug.compileFile(__dirname + '/src/templates/terms.pug')
+const privacyPolicy = pug.compileFile(__dirname + '/src/templates/privacy-policy.pug')
+
 
 app.use(logger('dev'))
 app.use(bodyParser.json())
@@ -44,6 +48,16 @@ app.get('/trial', function(req, res, next) {
 
 app.get('/download', function(req, res, next) {
   res.send( download({ title: 'Download' }) )
+})
+
+app.get('/affiliate', function(req, res, next) {
+  res.send( affiliate({ title: 'Affiliate' }) )
+})
+app.get('/terms', function(req, res, next) {
+  res.send( terms({ title: 'Terms&Conditions' }) )
+})
+app.get('/privacy-policy', function(req, res, next) {
+  res.send( privacyPolicy({ title: 'PrivacyPolicy' }) )
 })
 
 
