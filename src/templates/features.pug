@@ -1,0 +1,174 @@
+extend default
+
+block content
+
+  <section class="page-header">
+    <div class="container">
+      <h1>User Guide</h1>
+      <div class="breadcrumb">
+        <a href="/">Home </a> <i class="fa fa-angle-right" aria-hidden="true"></i> User Guide
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <div class="container">
+      <h3>Quick Links</h3>
+      <ul>
+        <a href="#auto"><li>Trading in Auto mode</li></a>
+        <a href="#manual"><li>Trading in Manual mode</li></a>
+        <a href="#highPotential"><li>High potential coins</li></a>
+        <a href="#volumeBreakout"><li>Volume breakout indicator</li></a>
+        <a href="#bookmarking"><li>Bookmarking</li></a>
+      </ul>
+    </div>
+  </section>
+
+  <section id="auto">
+    <div class="container feature-list">
+      h3 Trading in Auto mode
+
+      .row
+        p.col-md-8.col-md-offset-2.centered-h Auto mode is designed as a <strong>quick way to react to changes in the price of an asset.</strong> It lets you define <em>multiple</em> buy and sell points, and it automatically takes care of <strong>issuing orders as fast as possible.</strong>
+
+      .row
+        .col-md-4
+          .feature-img.feature-1
+        .col-md-8
+          h4 Configuration
+          .hr
+          p In <strong>auto mode</strong>, you define the amount you want to buy and sell <em>with respect to the quote currency</em> (eg. for BTC-ETH, in BTC or for USDT-ETH in USDT), and you set the price by configuring <strong>a percentage above</strong> (or below) the current price that you want to buy at.
+
+          p <em>For example</em>, if you're expecting a low volume coin to rise sharply after a big announcement you could setup the buy configuration at 5% above the current price, this will ensure that even if the price rises fast eating through the order book, your order will still go through right away.
+
+          p The <strong>percent above</strong> parameter (for all buys and sells) is based on the current price at the time you press the <strong>Execute Auto</strong> button. So if you're buying BTC-ETH, the current price is 0.1 and you indicate +10% for the buy and +20% for the sell, CryptoStorm will put a buy order in for 0.11 BTC, wait until it is filled, then put a sell order at 0.12 BTC.
+
+          p It's important to note that, especially with low volume coins, the order book must have enough volume for the order to go through instantly.
+
+      .row
+        .col-md-4
+          .feature-img.feature-3
+        .col-md-8
+          h4 The Chart
+          .hr
+          p The <strong>real-time chart</strong> displays a <em>second by second</em> representation of the current price. Every single trade executed on the Exchange updates the position of the line in the chart.
+
+          p On the chart you can see markers for both your configured orders (in <strong style="color: #62312e;">dark red</strong> for sells and <strong style="color: #334b2e;">dark green</strong> for buys) and for your open orders (in <strong style="color: #f74d43;">bright red</strong> and <strong style="color: #67af4f;">bright green</strong>).
+
+      .row
+        .col-md-4
+          .feature-img.feature-2
+        .col-md-8
+          h4 Cancel All and Cancel and Sell
+          .hr
+          p The <strong>Cancel All</strong>  and <strong>Cancel and Sell</strong>  button come in handy when you want to <strong>bail from a trade as fast as possible.</strong>
+
+          p The <strong>Cancel All</strong> is always available, when clicked, it instatly cancels all open orders <em>for the currently selected coin and exchange.</em>
+
+          p <strong>Cancel and Sell</strong> is only available in auto mode. On click, it will immediately <em>cancel all open orders</em> for the currently selected coin and exchange, <em>retrieve its balance</em> and <strong>sell all of it</strong>. As fast as exchanges allow.
+
+          p <strong>Tip:</strong> You can also cancel specific orders directly from the Open Orders list.
+    </div>
+  </section>
+
+  <section id="manual">
+    <div class="container feature-list">
+      h3 Trading in Manual mode
+
+      .row
+        p.col-md-8.col-md-offset-2.centered-h <strong>Manual mode</strong> is a quick way for you to configure and execute one or multiple trades at the same time on any of the supported exchanges with one simple click. It's a central way of managing your trades in one hub.
+
+      .row
+        .col-md-4
+          .feature-img.feature-7
+        .col-md-8
+          h4 Configuration
+          .hr
+
+          p <strong>Define the amount</strong> you want to buy/sell <em>in the base currency</em>, and the rate at which you want to buy/sell it at in the quote currency. Repeat. Then execute them all with one click. Manual mode is provides essentially the same functionally as placing an order directly through the exchange, but faster.
+
+          p Keep in mind that <strong>you need sufficient balance</strong> for all orders, and each order needs to be <strong>above the minimum trade amount.</strong>
+
+          p <strong>Note:</strong> Binance has strict rules about the <strong>minimum trade amount</strong> and the <strong>significant digits</strong> of prices and amounts. <em>For example</em>, you cannot issue a 0.0015 order for BTC-ETH, but you can issue a 0.002 order, because Binance limits ETH orders at 3 significant digits. <strong>The limit varies with each pair.</strong> CryptoStorm automatically takes care of verifying the number's precision is correct and it performs rounding when needed.
+
+      .row
+        .col-md-4
+          .feature-img.feature-3
+        .col-md-8
+          h4 The Chart
+          .hr
+
+          p The <strong>real-time chart</strong> displays a <em>second by second</em> representation of the current price. Every single trade executed on the Exchange updates the position of the line in the chart.
+
+          p On the chart you can see markers for both your configured orders (in <strong style="color: #62312e;">dark red</strong> for sells and <strong style="color: #334b2e;">dark green</strong> for buys) and for your open orders (in <strong style="color: #f74d43;">bright red</strong> and <strong style="color: #67af4f;">bright green</strong>).
+
+      .row
+        .col-md-4
+          .feature-img.feature-8
+        .col-md-8
+          h4 Cancel All
+          .hr
+          p The Cancel All action allows you to easily and quickly remove all open orders for a selected market on a selected exchange. This can be useful when you observe market swings and want to adjust your open orders before the opportunity is gone.
+
+          p <strong>Tip:</strong> You can also cancel specific orders directly from the Open Orders list.
+    </div>
+  </section>
+
+  <section>
+    <div class="container feature-list">
+      h3 Sidebar Actions
+      .row
+        p.col-md-8.col-md-offset-2.centered-h The sidebar is chock-full of extra features, signals, and settings. View overviews of your balances and open orders, add your API keys, access your bookmarks, and monitor signals.
+
+      .row#highPotential
+        .col-md-4
+          .feature-img.feature-6
+        .col-md-8
+          h4 High Potential Coins
+          .hr
+          p Each signal in the High Potential Coins list shows the <strong>price percentage growth a market would experience</strong> given a an increase in buy volume (in BTC). It does so by calculating <strong>Order Book depth.</strong>
+
+          p In this example, 5 BTC of buy volume would cause the price of ETH-CRB to increase by 23.41%, 10 BTC of buy volume would cause the price to increase by 39.79%, etc.
+
+          p Click on the card to view the second-by-second chart and place orders for that pair.
+
+          p <strong>Note:</strong> The Volume Breakout Indicator is currently only available for <strong>Bittrex</strong>
+
+      .row#volumeBreakout
+        .col-md-4
+          .feature-img.feature-5
+        .col-md-8
+          h4 Volume Breakout Indicator
+          .hr
+
+          p The logic of the Volume Breakout Indicator is simple but convenient. Under the hood, CryptoStorm monitors all markets, trade by trade, in real time for <strong>large swings in volume in a short period of time</strong>, so that you can use the signals in conjunction with the auto trade or manual trade mode to quickly place orders and ride the wave before it's too late.
+
+          p Click on the card to view the second-by-second chart and place your orders.
+      
+      .row#bookmarking
+        .col-md-4
+          .feature-img.feature-4
+        .col-md-8
+          h4 Bookmarking
+          .hr
+          p Keep an eye on moving markets by storing them in your bookmarks list. Click the star icon <i class="fa fa-star" aria-hidden="true"></i>, to <strong>add or remove the market from your watch list</strong>, which appears in the sidebar. In one place, you can monitor the current rate and 24hr growth of the markets you care about.
+
+          p Click on the card to view the second-by-second chart and place your orders.
+
+          p <strong>Note:</strong> The Volume Breakout Indicator is currently only available for <strong>Bittrex</strong>
+    </div>
+  </section>
+
+
+  <section class="alt-background-dark banner">
+    <div class="container">
+      <div class="col-md-8">
+        <h3>Ready to get started?</h3>
+        <span>Buy your copy of CryptoStorm today.</span>
+      </div>
+      <div class="col-md-4">
+        <a class="button" id="buyBanner" href="/buy">Buy now</a>
+        <a class="button light" id="demoBanner" href="/trial">Free Trial</a>
+      </div>
+    </div>
+  </section>

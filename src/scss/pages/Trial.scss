@@ -1,0 +1,20 @@
+.Trial {
+    h2 {
+        color: #8f979e;
+    }
+    h2 strong {
+        color: inherit;
+    }
+
+    #LoadingCode {
+        display: none;
+    }
+
+    #DisplayCode {
+        display: none;
+    }
+
+    #ErrorCode {
+        display: none;
+    }   
+}

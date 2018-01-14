@@ -1,0 +1,179 @@
+.Home {
+    h1 {
+        color: $white;
+        font-size: 44px;
+    }
+
+    h2 {
+        strong {
+            color: $white;
+        }
+    }
+
+    section {
+        padding: 100px 0 120px
+    }
+
+    .page-header {
+        background: $primary;
+        margin-bottom: 60px;
+        padding: 200px 0 0;
+    }
+    .screenshot {
+        background: url(../images/dashboard.png) no-repeat;
+        background-size: 100%;
+        display: block;
+        margin: -70px 0 -100px;
+        width: 830px;
+        height: 530px;
+        @media screen and (max-width: 992px) {
+            margin: 50px 0 -210px;
+            height: 500px;
+            width: auto;
+        }
+        @media screen and (max-width: 650px) {
+            height: 430px;
+        }
+        @media screen and (max-width: 500px) {
+            height: 350px;
+        }
+    }   
+
+    .lead-gen {
+        background: $white;
+        border-radius: 3px;
+        margin-top: 30px;
+        padding: 8px 10px;
+        max-width: 360px;
+
+        input {
+            border: none;
+            color: $text-primary;
+            padding: 0;
+            font-size: 16px;
+            margin-right: 2%;
+            width: 65%;
+            font-size: 15px;
+        }
+        button {
+            background: none;
+            border-radius: 0;
+            border: none;
+            border-left: 2px solid $bg-dark;
+            box-shadow: none;
+            color: $primary;
+            padding: 0;
+            margin: 0;
+            width: 33%;
+            font-size: 15px;
+        }
+    }
+
+    #WhatIsCS {
+        .WhatIsCS-item {
+            &:before {
+                background: $primary;
+                border-radius: 10px;
+                box-shadow: 0px 7px 30px rgba(51, 112, 154, 0.4);
+                content: '';
+                display: block;
+                width: 80px;
+                height: 80px;
+                margin: 30px auto 40px;
+            }
+            .WhatIsCS-header {
+                color: $text-secondary;
+                display: block;
+                font-size: 20px;
+                margin-bottom: 14px;
+            }
+            .WhatIsCS-desc {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    #Features {
+        @media screen and (max-width: 630px) {
+            padding-top: 20px;
+        }
+        @media screen and (max-width: 480px) {
+            padding-top: 70px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 40px;
+            list-style: none;
+            
+            li {
+                padding: 20px 30px 20px 70px;
+                position: relative;
+                
+                i {
+                    color: #40abe4;
+                    border: 2px solid #40abe4;
+                    border-radius: 40px;
+                    font-size: 24px;
+                    margin-right: 18px;
+                    padding: 11px 0;
+                    text-align: center;
+                    height: 50px;
+                    width: 50px;
+                    position: absolute;
+                    left: 0;
+                }
+                .feature-title {
+                    color: #161617;
+                    display: block;
+                    font-size: 17px;
+                    font-weight: 600;
+                    margin-bottom: 2px;
+                    padding-top: 8px;
+                    text-transform: capitalize;
+                }
+                .feature-desc {
+                    display: block;
+                }
+            }
+        }
+
+        .button {
+            margin: 0 auto;
+        }
+    } 
+
+    #Pricing {
+        .pricing-box {
+            border: 1px solid #e4ecf1;
+            padding: 30px 0 40px;
+            text-align: center;
+            p {
+                margin: 0;
+                &:first-of-type {
+                    color: $primary;
+                    font-size: 40px;
+                }
+                &:not(:first-of-type) {
+                    text-transform: uppercase;
+                    font-weight: 800;
+                }
+            }
+        }
+        .pricing-details {
+            ul {
+                margin: 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+                li {
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                    i {
+                        padding-right: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 // var baseUrl = 'http://localhost:3000'
-var baseUrl = 'http://104.131.11.223'
+// var baseUrl = 'http://104.131.11.223'
+var baseUrl = 'https://api.getcryptostorm.com'
 
 var generateBtn = document.getElementById('generateCodeBtn')
 

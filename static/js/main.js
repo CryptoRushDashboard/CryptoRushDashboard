@@ -1,6 +1,7 @@
 // config
 // var baseUrl = 'http://localhost:3000'
-var baseUrl = 'http://104.131.11.223'
+// var baseUrl = 'http://104.131.11.223'
+var baseUrl = 'https://api.getcryptostorm.com'
 var transaction = {}
 var paymentTimer = null
 var currentPage = window.location.href.toLowerCase()
@@ -69,7 +70,7 @@ var updatePaymentFrame = function(transactionId, amount) {
     klukt.render('#payment-address-container', opts, function (payment) {
         console.log('Payment received!!', payment)
     })*/
-    var userEmail = document.querySelector('#BuyModal input[name=email]').value;
+    var userEmail = document.querySelector('#BuyForm-1 input[name=email]').value;
     paymentContainer.innerHTML = '<iframe src="https://klukt.com/widget.html?apikey=q49rbwjukg&id='+transactionId+'&amount='+amount+'&curr=BTC&email='+userEmail+'" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>'
 }
 
@@ -78,13 +79,13 @@ var checkForPayment = function(transactionId) {
     .then((res) => {
         if (res.data.status == 'failed') {
             clearInterval(paymentTimer)
-            document.getElementById('BuyForm').style.display = 'none'
+            document.getElementById('BuyForm-2').style.display = 'none'
             document.getElementById('PaymentFail').style.display = 'block'
         }
         else if (res.data.status == 'completed') {
             clearInterval(paymentTimer)
             document.getElementById('activation-code').innerHTML = res.data.license
-            document.getElementById('BuyForm').style.display = 'none'
+            document.getElementById('BuyForm-2').style.display = 'none'
             document.getElementById('PaymentSuccess').style.display = 'block'
         }
     })
@@ -101,7 +102,7 @@ var initPayment = function(modalId) {
         transaction = res.data
         updatePaymentFrame(res.data._id, res.data.amount)
 
-        var discountInput = document.querySelector('#BuyModal input[name=discount]')
+        var discountInput = document.querySelector('#BuyForm-1 input[name=discount]')
         if (discountInput) checkDiscountCode(res.data._id, discountInput.value)
         
         paymentTimer = setInterval(() => checkForPayment(res.data._id), 2000)
@@ -112,13 +113,13 @@ var initPayment = function(modalId) {
 
 }
 
-var discountInput = document.querySelector('#BuyModal input[name=discount]')
+var discountInput = document.querySelector('#BuyForm-1 input[name=discount]')
 if (discountInput)
     discountInput.addEventListener("keyup", function(e) {
         checkDiscountCode(transaction._id, e.target.value)
     })
 
-var emailInput = document.querySelector('#BuyModal input[name=email]')
+var emailInput = document.querySelector('#BuyForm-1 input[name=email]')
 if (emailInput)
     emailInput.addEventListener("blur", function(e) {
         var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -143,25 +144,26 @@ var hideModal = function(modalId) {
     document.getElementsByTagName("body")[0].style.overflow = "visible"
 }
 
-var buyBtn         = document.getElementById('buy')
-var buyBannerBtn   = document.getElementById('buyBanner')
-var buyModal       = document.getElementById('BuyModal')
-var closeBuyModal  = document.getElementById('CloseBuyModal')
 
-if (buyBtn) buyBtn.addEventListener("click", () => initPayment(buyModal))
-if (buyBannerBtn) buyBannerBtn.addEventListener("click", () => initPayment(buyModal))
-if (currentPage.indexOf('buy.html') >= 0) initPayment(null)
-if (closeBuyModal) closeBuyModal.addEventListener("click", () => hideModal(buyModal))
-
-
-var dashboardScreenshot = document.querySelector('.dashboard-screenshot')
-var videoOverlay        = document.querySelector('.video-overlay')
-var youTubeModal        = document.getElementById('YouTubeModal')
-var closeYouTubeModal   = document.getElementById('CloseYouTubeModal')
-
-if (videoOverlay) videoOverlay.addEventListener("click", () => showModal(youTubeModal))
-if (dashboardScreenshot) dashboardScreenshot.addEventListener("click", () => showModal(youTubeModal))
-if (closeYouTubeModal) closeYouTubeModal.addEventListener("click", () => hideModal(youTubeModal))
+let continueBtn = document.getElementById('continuePayment')
+if (continueBtn) {
+    continueBtn.addEventListener('click', function(e) {
+        // No email
+        if (document.querySelector('#BuyForm-1 input[name=email]').value == '') {
+            document.querySelector('.email-error').style.display = 'block'
+        } 
+        // No T&C
+        else if (!document.querySelector('#BuyForm-1 input[name=terms]').checked) {
+            document.querySelector('.terms-error').style.display = 'block'
+        } 
+        // Good to go
+        else {
+            initPayment(null)
+            document.getElementById('BuyForm-1').style.display = 'none'
+            document.getElementById('BuyForm-2').style.display = 'block'
+        }
+    })
+}
 
 
 // Handle discount code in query string
@@ -194,3 +196,18 @@ if (urlStart >= 0)
     saveDiscountCode(currentPage.substr(urlStart + 13, 6))
 else
     getDiscountCode()
+
+
+
+/* FAQ Accordion */
+let faqItems = document.querySelectorAll('.FAQ-list li')
+faqItems.forEach(function(e) {
+    e.addEventListener('click', function(e) {
+        if (e.target.closest('li').className == "active")
+            e.target.closest('li').className = ""
+        else
+            e.target.closest('li').className = "active"
+    })
+})
+
+

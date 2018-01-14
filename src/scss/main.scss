@@ -1,0 +1,12 @@
+@import 'vendor/bootstrap';
+
+@import 'variables',
+        'mixins',
+        'theme';
+
+@import 'pages/Buy',
+		'pages/Download',
+		'pages/FAQ',
+		'pages/Features',
+		'pages/Home',
+		'pages/Trial';

@@ -1,0 +1,57 @@
+extend default
+
+block content
+  
+  <section class="page-header">
+    <div class="container">
+      <h1>Free Trial</h1>
+      <div class="breadcrumb">
+        <a href="/">Home </a> <i class="fa fa-angle-right" aria-hidden="true"></i> Trial
+      </div>
+    </div>
+  </section>
+
+  <section class="centered-h">
+    <div id="GenerateCode">
+      <div class="container">
+        <h3>Try CryptoStorm for FREE!</h3>
+        <h2>Generate your access key to unlock free 24 hour access to CryptoStorm.</h2>
+      </div>
+      <a class="button track-click wide" id="generateCodeBtn">Generate code</a>
+    </div>
+
+    <div id="LoadingCode">
+      <i class="fa fa-cogs modal-icon" aria-hidden="true"></i>
+      <span class="pulse">Generating activation code...</span>
+    </div>
+
+    <div id="DisplayCode">
+      <div class="container">
+        <h3>Success!</h3>
+        <p>Here is your activation code:</p>
+        <p>Code expires on <strong><span id="code-expiry"></span></strong></p>
+        <div class="col-md-12">
+          <span id="activation-code" class="col-md-8 col-md-offset-2">[Activation code]</span>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Download</h3>
+        include components/download
+      </div>
+    </div>
+
+    <div id="ErrorCode">
+      <div class="modal-header">
+        <i class="fa fa-exclamation-triangle modal-icon" aria-hidden="true"></i>
+        <h3>Error</h3>
+        <p>There was a problem while generating your access code.</p>
+        <p>Please contact <a href="http://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a> for support. We will respond as soon as possible.</p>
+      </div>
+    </div>
+  </section>
+
+
+block scripts
+
+  <script src="js/promo.js"></script>
+

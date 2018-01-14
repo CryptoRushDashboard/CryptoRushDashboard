@@ -1,0 +1,25 @@
+.Buy {
+    #BuyForm-1, #BuyForm-2 {
+        ul {
+            list-style: none;
+            text-align: left;
+        }
+        li {
+            margin: 100px 0;
+            position: relative;
+        }
+    }
+    .question-number {
+        position: absolute;
+        left: -34px;
+        top: 6px;
+        color: $primary;
+    }
+    .question-number i {
+        color: $primary;
+        font-size: 12px;
+    }
+    #BuyForm-2, #PaymentSuccess, #PaymentFail {
+        display: none;
+    }   
+}

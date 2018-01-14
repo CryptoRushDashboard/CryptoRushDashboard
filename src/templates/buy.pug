@@ -1,0 +1,83 @@
+extend default
+
+block content
+  
+  <section class="page-header">
+    <div class="container">
+      <h1>Let's get started!</h1>
+      <div class="breadcrumb">
+        <a href="/">Home </a> <i class="fa fa-angle-right" aria-hidden="true"></i> Purchase
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="row" id="BuyForm-1" style="padding-top:30px;">
+      <div class="col-md-12">
+        <ul class="col-md-8 col-md-offset-2 col-xs-11 col-xs-offset-1">
+          <li>
+            <span class="question-number">1&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+            <label for="email">What is your email address? *</label>
+            <input name="email" type="email">
+            <span class="error-message email-error">Invalid email address</span>
+          </li>
+          <li>
+            <span class="question-number">2&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+            <label for="discount">Do you have a discount code?</label>
+            <input name="discount" type="text">
+            <span class="error-message discount-error">Invalid discount code</span>
+          </li>
+          <li>
+            <input type="checkbox" id="terms" name="terms" required/>
+            <label for="terms">I have read and agree to the agree to the <a href="/terms" target="_blank">Terms and Conditions</a>, and <a href="/privacy-policy" target="_blank">Privacy Policy</a>.</label>
+            <span class="error-message terms-error">This is a required field.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="center col-md-12">
+        <button class="button wide" id="continuePayment">Continue</button>
+      </div>
+    </section>
+
+    <section class="row centered-h" id="BuyForm-2" style="padding-top:30px;">
+      <div class="modal-header">
+        <ul class="col-md-8 col-md-offset-2 col-xs-11 col-xs-offset-1">
+          <li>
+            //- <span class="question-number">3&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+            <label>Payment</label>
+            <span>Once your payment is received, we will display your activation code and download link.</span>
+            <div id="payment-address-container">
+                <!--<iframe src="https://klukt.com/w/a6eage6yew/4847e/0.5/BTC" scrolling="" frameborder="0" style="border:none;border-radius:5px;" width=240 height=300/>-->
+            </div>
+            <span class="error-message payment-error">Invalid payment amount</span>
+            <div class="transaction-pulse-container">
+                <span class="pulse">Verifying your transaction...</span>
+                <span>Hang tight while we search for your transaction on the blockchain. Your activation code will automatically be displayed once we've validated your payment.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="row centered-h" id="PaymentSuccess" style="padding-top:30px;">
+      <div class="modal-header">
+        <h3>Success!</h3>
+        <p>Here is your activation code:</p>
+        <div class="col-md-12">
+          <span id="activation-code" class="col-md-8 col-md-offset-2">[Activation code]</span>
+        </div>
+      </div>
+
+      <h3>Download</h3>
+      include components/download
+    </section>
+
+    <section class="row" id="PaymentFail">
+      <div class="modal-header">
+        <i class="fa fa-exclamation-triangle modal-icon" aria-hidden="true"></i>
+        <h3>Error</h3>
+        <p>We received your payment, but <strong>it wasn't for the right amount.</strong></p>
+        <p>Please contact <a href="http://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a> for support. We will respond as soon as possible.</p>
+      </div>
+    </section>
+  </div>

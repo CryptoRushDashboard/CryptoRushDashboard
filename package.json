@@ -1,0 +1,27 @@
+{
+  "name": "cryptostorm-www-github",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoRushDashboard/CryptoRushDashboard.github.io.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CryptoRushDashboard/CryptoRushDashboard.github.io/issues"
+  },
+  "homepage": "https://github.com/CryptoRushDashboard/CryptoRushDashboard.github.io#readme",
+  "scripts": {
+    "start": "nodemon server -e js,pug"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.6",
+    "pug": "^2.0.0-rc.4",
+    "run-sequence": "^2.2.0"
+  }
+}
