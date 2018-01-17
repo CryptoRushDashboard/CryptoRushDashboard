@@ -15,28 +15,28 @@ block content
     <div id="GenerateCode">
       <div class="container">
         <h3>Try CryptoStorm for FREE!</h3>
-        <h2>Generate your access key to unlock free 24 hour access to CryptoStorm.</h2>
+        <div class="col-md-8 col-md-offset-2">
+          <h2>Generate your license key to unlock free <strong>24 hour access</strong> to CryptoStorm.</h2>
+          <h2>First enter a <strong>valid email address</strong>, then we will send your CryptoStorm license key and download links to that address.</h2>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+          <input name="email" type="email" placeholder="Email" />
+          <span class="error-message email-error">Invalid email address</span>
+          <a class="button track-click wide" id="generateCodeBtn">Send me a free trial</a>
+        </div>
       </div>
-      <a class="button track-click wide" id="generateCodeBtn">Generate code</a>
     </div>
 
     <div id="LoadingCode">
       <i class="fa fa-cogs modal-icon" aria-hidden="true"></i>
-      <span class="pulse">Generating activation code...</span>
+      <span class="pulse">Generating license key...</span>
     </div>
 
     <div id="DisplayCode">
       <div class="container">
+        <i class="fa fa-check modal-icon" aria-hidden="true"></i>
         <h3>Success!</h3>
-        <p>Here is your activation code:</p>
-        <p>Code expires on <strong><span id="code-expiry"></span></strong></p>
-        <div class="col-md-12">
-          <span id="activation-code" class="col-md-8 col-md-offset-2">[Activation code]</span>
-        </div>
-      </div>
-      <div class="container">
-        <h3>Download</h3>
-        include components/download
+        <p>Check your email for your license key and download links.</p>
       </div>
     </div>
 
@@ -44,7 +44,7 @@ block content
       <div class="modal-header">
         <i class="fa fa-exclamation-triangle modal-icon" aria-hidden="true"></i>
         <h3>Error</h3>
-        <p>There was a problem while generating your access code.</p>
+        <p>There was a problem while generating your license key.</p>
         <p>Please contact <a href="http://t.me/CryptoStorm" target="_blank">t.me/CryptoStorm</a> for support. We will respond as soon as possible.</p>
       </div>
     </div>
