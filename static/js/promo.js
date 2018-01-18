@@ -9,16 +9,21 @@ var DisplayCodeDiv  = document.getElementById('DisplayCode')
 var ErrorCodeDiv    = document.getElementById('ErrorCode')
 
 generateBtn.addEventListener("click", function(e) {
-    GenerateCodeDiv.style.display = 'none'
-    LoadingCodeDiv.style.display = 'block'
+    e.preventDefault()
 
     var email = document.querySelector('input[name=email]').value
 
-    if (email == '') {
+    if (email == "") {
         document.querySelector('.email-error').style.display = 'block'
     } else {
         axios.post(baseUrl+'/license/trial', { email: email })
         .then((res) => {
+            GenerateCodeDiv.style.display = 'none'
+            LoadingCodeDiv.style.display = 'block'
+
+            document.getElementById('activation-code').innerHTML = res.data.product_key
+            document.getElementById("code-expiry").innerHTML = new Date(res.data.expires_at)
+
             LoadingCodeDiv.style.display = 'none'
             DisplayCodeDiv.style.display = 'block'
         })
