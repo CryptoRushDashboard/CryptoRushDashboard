@@ -56,6 +56,7 @@ var updateEmail = (transactionId, email) => {
     .catch((err) => {
         console.log(err)
     })
+    console.log('update', email)
 }
 
 var updatePaymentFrame = function(transactionId, amount) {
@@ -101,6 +102,9 @@ var initPayment = function(modalId) {
     .then((res) => {
         transaction = res.data
         updatePaymentFrame(res.data._id, res.data.amount)
+
+        // var emailInput = document.querySelector('#BuyForm-1 input[name=email]')
+        // updateEmail(res.data._id, emailInput.value)
 
         var discountInput = document.querySelector('#BuyForm-1 input[name=discount]')
         if (discountInput) checkDiscountCode(res.data._id, discountInput.value)
@@ -158,12 +162,12 @@ if (continueBtn) {
         } 
         // Good to go
         else {
-            initPayment(null)
             document.getElementById('BuyForm-1').style.display = 'none'
             document.getElementById('BuyForm-2').style.display = 'block'
         }
     })
 }
+initPayment(null)
 
 
 // Handle discount code in query string
