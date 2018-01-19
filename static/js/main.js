@@ -114,7 +114,6 @@ var initPayment = function(modalId) {
     .catch((err) => {
         console.log(err)
     })
-
 }
 
 var discountInput = document.querySelector('#BuyForm-1 input[name=discount]')
@@ -167,7 +166,7 @@ if (continueBtn) {
         }
     })
 }
-initPayment(null)
+if (currentPage.indexOf('buy') >= 0) initPayment(null)
 
 
 // Handle discount code in query string

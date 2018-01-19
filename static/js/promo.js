@@ -21,8 +21,8 @@ generateBtn.addEventListener("click", function(e) {
             GenerateCodeDiv.style.display = 'none'
             LoadingCodeDiv.style.display = 'block'
 
-            document.getElementById('activation-code').innerHTML = res.data.product_key
-            document.getElementById("code-expiry").innerHTML = new Date(res.data.expires_at)
+            // document.getElementById('activation-code').innerHTML = res.data.product_key
+            // document.getElementById("code-expiry").innerHTML = new Date(res.data.expires_at)
 
             LoadingCodeDiv.style.display = 'none'
             DisplayCodeDiv.style.display = 'block'
