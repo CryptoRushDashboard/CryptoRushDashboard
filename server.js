@@ -12,6 +12,7 @@ const buy = pug.compileFile(__dirname + '/src/templates/buy.pug')
 const guide = pug.compileFile(__dirname + '/src/templates/features.pug')
 const trial = pug.compileFile(__dirname + '/src/templates/trial.pug')
 const download = pug.compileFile(__dirname + '/src/templates/download.pug')
+const releases = pug.compileFile(__dirname + '/src/templates/releases.pug')
 
 const affiliate = pug.compileFile(__dirname + '/src/templates/affiliate.pug')
 const terms = pug.compileFile(__dirname + '/src/templates/terms.pug')
@@ -49,6 +50,12 @@ app.get('/trial', function(req, res, next) {
 app.get('/download', function(req, res, next) {
   res.send( download({ title: 'Download' }) )
 })
+
+app.get('/releases', function(req, res, next) {
+  res.send( releases({ title: 'Releases' }) )
+})
+
+
 
 app.get('/affiliate', function(req, res, next) {
   res.send( affiliate({ title: 'Affiliate' }) )
