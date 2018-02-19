@@ -101,6 +101,11 @@ var initPayment = function(modalId) {
     axios.post(baseUrl + '/payment')
     .then((res) => {
         transaction = res.data
+
+        let urlStart = currentPage.indexOf('discountcode=')
+        if (urlStart >= 0) saveDiscountCode(currentPage.substr(urlStart + 13, 6))
+        else getDiscountCode()
+    
         updatePaymentFrame(res.data._id, res.data.amount)
 
         // var emailInput = document.querySelector('#BuyForm-1 input[name=email]')
@@ -166,7 +171,6 @@ if (continueBtn) {
         }
     })
 }
-if (currentPage.indexOf('buy') >= 0) initPayment(null)
 
 
 // Handle discount code in query string
@@ -194,11 +198,14 @@ var getDiscountCode = function() {
     if (cookieStart >= 0) saveDiscountCode(document.cookie.substr(cookieStart + 13, 6))
 }
 
-let urlStart = currentPage.indexOf('discountcode=')
-if (urlStart >= 0)
-    saveDiscountCode(currentPage.substr(urlStart + 13, 6))
-else
-    getDiscountCode()
+
+if (currentPage.indexOf('buy') >= 0) {
+    initPayment(null)
+}
+
+// let urlStart = currentPage.indexOf('discountcode=')
+// if (urlStart >= 0) saveDiscountCode(currentPage.substr(urlStart + 13, 6))
+// else getDiscountCode()
 
 
 
