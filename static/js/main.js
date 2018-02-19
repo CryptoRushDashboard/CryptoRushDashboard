@@ -105,7 +105,7 @@ var initPayment = function(modalId) {
         let urlStart = currentPage.indexOf('discountcode=')
         if (urlStart >= 0) saveDiscountCode(currentPage.substr(urlStart + 13, 6))
         else getDiscountCode()
-    
+
         updatePaymentFrame(res.data._id, res.data.amount)
 
         // var emailInput = document.querySelector('#BuyForm-1 input[name=email]')
@@ -180,7 +180,7 @@ var saveDiscountCode = function(code) {
     .then((res) => {
         if (res.data.isValid) {
             console.log('valid discount code')
-            document.cookie = 'discountcode='+code  // save to cookie
+            saveDiscountCodeCookie(code)
             document.querySelector('input[name=discount]').value = code
 
             // if (currentPage.indexOf('buy.html') >= 0) initPayment(null)
@@ -193,19 +193,21 @@ var saveDiscountCode = function(code) {
         console.log(err)
     })
 }
+
+var saveDiscountCodeCookie = function(code) {
+    document.cookie = 'discountcode='+code  // save to cookie
+}
+
 var getDiscountCode = function() {
     let cookieStart = document.cookie.indexOf('discountcode=')
     if (cookieStart >= 0) saveDiscountCode(document.cookie.substr(cookieStart + 13, 6))
 }
 
 
-if (currentPage.indexOf('buy') >= 0) {
-    initPayment(null)
-}
+if (currentPage.indexOf('buy') >= 0) initPayment(null)
 
-// let urlStart = currentPage.indexOf('discountcode=')
-// if (urlStart >= 0) saveDiscountCode(currentPage.substr(urlStart + 13, 6))
-// else getDiscountCode()
+let urlStart = currentPage.indexOf('discountcode=')
+if (urlStart >= 0) saveDiscountCodeCookie(currentPage.substr(urlStart + 13, 6))
 
 
 
