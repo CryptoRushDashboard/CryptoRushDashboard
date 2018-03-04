@@ -176,4 +176,30 @@
             }
         }
     }
+
+    #Exchanges {
+        text-align: center;
+        padding: 80px 0;
+
+        .exchange {
+            display: inline-block;
+            margin: 40px auto 0;
+            max-width: 230px;
+            height: 70px;
+            width: 100%;
+
+            &.bittrex {
+                background: url(../images/exchange-bittrex.png) no-repeat;
+                background-size: 100%;
+            }
+            &.binance {
+                background: url(../images/exchange-binance.png) no-repeat;
+                background-size: 100%;
+            }
+            &.cryptopia {
+                background: url(../images/exchange-cryptopia.png) no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
 }
