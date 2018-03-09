@@ -1,0 +1,15 @@
+.Support {
+    .button {
+        max-width: 260px;
+    }
+
+    .support-method {
+        border: 1px solid $bg-dark;
+        border-radius: 4px;
+        padding: 20px 0 60px;
+
+        &:first-of-type {
+            margin-bottom: 50px;
+        }
+    }
+}
