@@ -1,5 +1,5 @@
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
     color: $text-primary;
 
     -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ h2 {
 h3 {
     color: $text-secondary;
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -170,6 +170,7 @@ nav {
     }
     .brand a {
         color: $text-secondary;
+        font-family: 'Nunito', sans-serif;
         font-size: 20px;
         font-weight: 700;
         letter-spacing: -0.8px;
@@ -262,7 +263,7 @@ section {
     padding: 0 10px 1px 6px;
     
     .new-pill {
-        background: #2cd495;
+        background: #18daa3;
         border-radius: 12px;
         color: $white;
         display: inline-block;

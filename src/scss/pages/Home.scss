@@ -1,7 +1,21 @@
 .Home {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(255,255,255,0.5);
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(255,255,255,0.5);
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: rgba(255,255,255,0.5);
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: rgba(255,255,255,0.5);
+    }
+    
     h1 {
         color: $white;
-        font-size: 44px;
+        font-size: 50px;
+        line-height: 1.1;
     }
 
     h2 {
@@ -15,17 +29,16 @@
     }
 
     .page-header {
-        background: $primary;
-        margin-bottom: 60px;
-        padding: 200px 0 0;
+        background: $primary url(../images/hero-bg.svg) no-repeat center 260px;
+        padding: 250px 0 150px;
     }
     .screenshot {
         background: url(../images/dashboard.png) no-repeat;
         background-size: 100%;
         display: block;
         margin: -70px 0 -100px;
-        width: 830px;
-        height: 530px;
+        width: 900px;
+        height: 570px;
         @media screen and (max-width: 992px) {
             margin: 50px 0 -210px;
             height: 500px;
@@ -40,32 +53,40 @@
     }   
 
     .lead-gen {
-        background: $white;
+        background: #36a3ec;
         border-radius: 3px;
         margin-top: 30px;
-        padding: 8px 10px;
-        max-width: 360px;
+        overflow: auto;
+        padding: 8px 8px 8px 20px;
+        -webkit-box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.08), inset 0 1px 0 0 rgba(255,255,255,0.1);
+        box-shadow: inset 0 -1px 0 0 rgba(255,255,255,0.08), inset 0 1px 0 0 rgba(255,255,255,0.1);
 
         input {
             border: none;
-            color: $text-primary;
+            background: none;
+            color: $white;
             padding: 0;
             font-size: 16px;
-            margin-right: 2%;
-            width: 65%;
-            font-size: 15px;
+            margin: 13px 0;
+            width: auto;
         }
         button {
-            background: none;
-            border-radius: 0;
+            background: #18daa3;
             border: none;
-            border-left: 2px solid $bg-dark;
             box-shadow: none;
-            color: $primary;
-            padding: 0;
-            margin: 0;
-            width: 33%;
+            color: $white;
+            float: right;
             font-size: 15px;
+            margin: 0;
+            @include transition(.3s ease-in-out);
+
+            @media screen and (max-width: 415px) {
+                float: none;
+            }
+
+            &:hover {
+                background: #23c387;
+            }
         }
     }
 
