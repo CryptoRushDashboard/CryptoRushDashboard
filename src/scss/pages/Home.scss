@@ -11,7 +11,7 @@
     :-moz-placeholder { /* Firefox 18- */
       color: rgba(255,255,255,0.5);
     }
-    
+
     h1 {
         color: $white;
         font-size: 50px;
@@ -30,7 +30,12 @@
 
     .page-header {
         background: $primary url(../images/hero-bg.svg) no-repeat center 260px;
+        background-size: 100%;
         padding: 250px 0 150px;
+        @media screen and (max-width: 1080px) {
+            background-size: auto;
+            background-position: bottom;
+        }
     }
     .screenshot {
         background: url(../images/dashboard.png) no-repeat;
