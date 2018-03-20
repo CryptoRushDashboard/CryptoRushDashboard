@@ -41,9 +41,34 @@
         background: url(../images/dashboard.png) no-repeat;
         background-size: 100%;
         display: block;
-        margin: -70px 0 -100px;
+        margin: -70px 0 -100px 100px;
         width: 900px;
         height: 570px;
+        opacity: 0;
+
+        -webkit-animation: slideIn 1s ease 0.5s forwards;
+        -moz-animation:    slideIn 1s ease 0.5s forwards;
+        -o-animation:      slideIn 1s ease 0.5s forwards;
+        animation:         slideIn 1s ease 0.5s forwards;
+
+        @-webkit-keyframes slideIn {
+            from { margin-left: 100px; }
+            to { margin-left: 0px; opacity: 1; }
+        }
+        @-moz-keyframes slideIn {
+            from { margin-left: 100px; }
+            to { margin-left: 0px; opacity: 1; }
+        }
+        @-o-keyframes slideIn {
+            from { margin-left: 100px; }
+            to { margin-left: 0px; opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { margin-left: 100px; }
+            to { margin-left: 0px; opacity: 1; }
+        }
+
+
         @media screen and (max-width: 992px) {
             margin: 50px 0 -210px;
             height: 500px;
